@@ -30,3 +30,21 @@ $mainFontColor: $brand-black;
   line-clamp: $c;
   box-orient: vertical;
 }
+
+/* полоса прокрутки (скроллбар) */
+::-webkit-scrollbar {
+  width: 5px; /* ширина для вертикального скролла */
+  height: 5px; /* высота для горизонтального скролла */
+  background-color: #143861;
+}
+
+/* ползунок скроллбара */
+::-webkit-scrollbar-thumb {
+  background-color: #843465;
+  border-radius: 3px;
+  box-shadow: inset 1px 1px 10px #f3faf7;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #253861;
+}

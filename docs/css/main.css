@@ -126,6 +126,28 @@ select {
 
 /* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
 
+/* полоса прокрутки (скроллбар) */
+
+::-webkit-scrollbar {
+  width: 5px;
+  /* ширина для вертикального скролла */
+  height: 5px;
+  /* высота для горизонтального скролла */
+  background-color: #143861;
+}
+
+/* ползунок скроллбара */
+
+::-webkit-scrollbar-thumb {
+  background-color: #843465;
+  border-radius: 3px;
+  box-shadow: inset 1px 1px 10px #f3faf7;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #253861;
+}
+
 /**
  * Swiper 8.0.3
  * Most modern mobile touch slider and framework with hardware accelerated transitions
@@ -895,10 +917,11 @@ body {
   background-color: #002754;
   width: 440px;
   height: 100vh;
+  overflow: auto;
 }
 
 .sidebar .sidebar__content {
-  height: 100%;
+  min-height: 100%;
   position: relative;
   z-index: 2;
   display: flex;
