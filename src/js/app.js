@@ -5,6 +5,7 @@ $(document).ready(function () {
         const placeholder = $(this).attr("data-placeholder");
         //name селекта
         const selectName = $(this).attr("name");
+
         $(this).select2({
             minimumResultsForSearch: -1,
             placeholder: placeholder,
@@ -22,7 +23,7 @@ document.addEventListener('click', (e) => {
         const dataVisualId = currentBtn.dataset.visual;
         activeBtn.classList.remove('active');
         currentBtn.classList.add('active');
-        dataVisualTemplate.setAttribute('data-visual-template', dataVisualId);
+        dataVisualTemplate && dataVisualTemplate.setAttribute('data-visual-template', dataVisualId);
     }
 
     if (target.closest('[data-close-banner]')) {

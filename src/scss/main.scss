@@ -515,7 +515,7 @@ ul.sidebar__list {
     overflow: hidden;
   }
   .select2-selection__rendered {
-    padding: 13px 28px !important;
+    padding: 13px 40px 13px 28px !important;
   }
   .select2-container--default .select2-selection--single {
     border: none;
@@ -608,6 +608,7 @@ ul.sidebar__list {
     height: 100%;
   }
   .item__head {
+    padding: 20px 40px;
     color: #fff;
     font-weight: 700;
     font-size: 19px;
@@ -619,12 +620,12 @@ ul.sidebar__list {
   .item__head,
   .item__body {
     padding: 20px 40px 40px;
+  }
+
+  .item__body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-  }
-  .item__head {
-    padding: 20px 40px;
   }
 
   .item__title {
@@ -645,4 +646,83 @@ ul.sidebar__list {
     margin-top: auto;
     padding-top: 20px;
   }
+  b {
+    color: #e65907;
+  }
+}
+
+.search-descr {
+  margin-top: 12px;
+  font-weight: 400;
+  font-size: 23px;
+  line-height: 28px;
+  color: rgba(4, 19, 39, 0.8);
+}
+
+.updates__controls.search-page {
+  margin-top: 40px;
+  margin-bottom: 25px;
+  margin-left: 0;
+  .controls-btns {
+    margin-left: auto;
+  }
+}
+
+.select__wrapper {
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+
+.zone-select {
+  .select2-container {
+    width: 220px !important;
+  }
+}
+
+.chapter-select {
+  .select2-container {
+    width: 155px !important;
+  }
+}
+
+.type-material-select {
+  .select2-container {
+    width: 236px !important;
+  }
+}
+
+.topic-select {
+  .select2-container {
+    width: 135px !important;
+  }
+}
+
+.search-result__enpty {
+  background: #ffffff;
+  border-radius: 16px;
+  height: 540px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.empty-ico {
+  margin: auto;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='32' height='33' viewBox='0 0 32 33' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg opacity='0.4'%3e%3cpath d='M14.6667 25.8333C20.5577 25.8333 25.3333 21.0577 25.3333 15.1667C25.3333 9.27563 20.5577 4.5 14.6667 4.5C8.77563 4.5 4 9.27563 4 15.1667C4 21.0577 8.77563 25.8333 14.6667 25.8333Z' stroke='%23041327' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3e%3cpath d='M28.0002 28.5L22.2002 22.7' stroke='%23041327' stroke-width='3' stroke-linecap='square' stroke-linejoin='round'/%3e%3c/g%3e%3c/svg%3e ");
+  width: 32px;
+  height: 32px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  margin-bottom: 30px;
+}
+.enpty__text {
+  font-weight: 300;
+  font-size: 23px;
+  line-height: 160%;
+  text-align: center;
+  color: #041327;
 }

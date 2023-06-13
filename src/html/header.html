@@ -1,23 +1,33 @@
-<!DOCTYPE html>
-<html lang="ru">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sitename</title>
-    <link rel="preload" href="./fonts/Inter-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="./fonts/Inter-Light.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="./fonts/Inter-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="./fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="./fonts/Inter-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/main.css">
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
-        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-    <script> </script>
-</head>
-
-<body>
+<header class="header">
+    <form role="search" method="get" id="searchform" action="" class="header__search">
+        <input type="text" value="" name="s" id="s" class="search__input" placeholder="Искать материалы" />
+    </form>
+    <div class="header__btns">
+        <a href="javaccript:void(0)" class="header__btn _favorites">
+            <div class="header__btn_ico">
+                <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M18.7998 42.9388V17.2222C18.7998 15.9949 19.7947 15 21.022 15H38.9776C40.2049 15 41.1998 15.9949 41.1998 17.2222V42.9388C41.1998 44.8302 38.9874 45.8569 37.5429 44.6358L29.9998 38.259L22.4567 44.6358C21.0122 45.8569 18.7998 44.8302 18.7998 42.9388Z"
+                        fill="#004596" stroke="#004596" stroke-width="2.22222" stroke-linejoin="round" />
+                </svg>
+            </div>
+        </a>
+        <a href="javaccript:void(0)" class="header__btn _notifications">
+            <div class="header__btn_ico">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M30 13.334C30 10.6818 28.9464 8.13828 27.0711 6.26292C25.1957 4.38755 22.6522 3.33398 20 3.33398C17.3478 3.33398 14.8043 4.38755 12.9289 6.26292C11.0536 8.13828 10 10.6818 10 13.334C10 25.0007 5 28.334 5 28.334H35C35 28.334 30 25.0007 30 13.334Z"
+                        fill="#004596" stroke="#004596" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path
+                        d="M22.8839 34C22.5908 34.5051 22.1703 34.9244 21.6642 35.2159C21.1582 35.5073 20.5845 35.6608 20.0005 35.6608C19.4166 35.6608 18.8428 35.5073 18.3368 35.2159C17.8308 34.9244 17.4102 34.5051 17.1172 34"
+                        fill="#004596" />
+                    <path
+                        d="M22.8839 34C22.5908 34.5051 22.1703 34.9244 21.6642 35.2159C21.1582 35.5073 20.5845 35.6608 20.0005 35.6608C19.4166 35.6608 18.8428 35.5073 18.3368 35.2159C17.8308 34.9244 17.4102 34.5051 17.1172 34"
+                        stroke="#004596" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <div class="notifications__count">99+</div>
+            </div>
+        </a>
+    </div>
+</header>

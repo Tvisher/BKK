@@ -1,0 +1,123 @@
+@@include('./html/head.html')
+<main>
+    @@include('./html/sidebar.html')
+    <div class="content-zone">
+        @@include('./html/header.html')
+        <section class="updates">
+            <h2 class="section-title">Результаты поиска</h2>
+            <div class="search-descr">
+                Мы нашли 12 материалов по запросу «Планирование»
+            </div>
+            <div class="updates__controls search-page">
+                <div class="zone-select  select__wrapper">
+                    <select name="search-zone" data-placeholder="Искать везде" class="styled_select">
+                        <option></option>
+                        <option value="2">Какой то большой текст</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+                <div class="chapter-select select__wrapper">
+                    <select name="chapter" data-placeholder="Раздел" class="styled_select">
+                        <option></option>
+                        <option value="2">Какой то большой текст</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+                <div class="type-material-select select__wrapper">
+                    <select name="type-material" data-placeholder="Тип материала" class="styled_select">
+                        <option></option>
+                        <option value="2">Какой то большой текст</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+                <div class="topic-select select__wrapper">
+                    <select name="topic" data-placeholder="Тема" class="styled_select">
+                        <option></option>
+                        <option value="2">Какой то большой текст</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+                <div class="controls-btns">
+                    <div class="controls__btn" data-visual="grid">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g opacity="0.8">
+                                <path d="M11.6667 3.5H3.5V11.6667H11.6667V3.5Z" stroke="#041327" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M24.4997 3.5H16.333V11.6667H24.4997V3.5Z" stroke="#041327" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M24.4997 16.332H16.333V24.4987H24.4997V16.332Z" stroke="#041327"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M11.6667 16.332H3.5V24.4987H11.6667V16.332Z" stroke="#041327" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </g>
+                        </svg>
+
+                    </div>
+                    <div class="controls__btn active" data-visual="row">
+                        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g opacity="0.8">
+                                <path
+                                    d="M2.7998 20.9992L2.7998 17.7326C2.7998 17.485 3.04564 17.2476 3.48322 17.0726C3.92081 16.8976 4.5143 16.7992 5.13314 16.7992L21.4665 16.7992C22.0853 16.7992 22.6788 16.8976 23.1164 17.0726C23.554 17.2476 23.7998 17.485 23.7998 17.7326L23.7998 20.9992M2.7998 20.9992L2.7998 24.2659C2.7998 24.5134 3.04564 24.7508 3.48322 24.9259C3.92081 25.1009 4.5143 25.1992 5.13314 25.1992L21.4665 25.1992C22.0853 25.1992 22.6788 25.1009 23.1164 24.9259C23.554 24.7508 23.7998 24.5134 23.7998 24.2659L23.7998 20.9992"
+                                    stroke="#041327" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M2.7998 8.39766L2.7998 5.13099C2.7998 4.88345 3.04564 4.64606 3.48322 4.47102C3.92081 4.29599 4.5143 4.19766 5.13314 4.19766L21.4665 4.19765C22.0853 4.19765 22.6788 4.29599 23.1164 4.47102C23.554 4.64606 23.7998 4.88345 23.7998 5.13099L23.7998 8.39765M2.7998 8.39766L2.7998 11.6643C2.7998 11.9119 3.04564 12.1493 3.48322 12.3243C3.92081 12.4993 4.5143 12.5977 5.13314 12.5977L21.4665 12.5977C22.0853 12.5977 22.6788 12.4993 23.1164 12.3243C23.554 12.1493 23.7998 11.9119 23.7998 11.6643L23.7998 8.39765"
+                                    stroke="#041327" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </g>
+                        </svg>
+
+                    </div>
+                </div>
+            </div>
+            <div class="search-result" id="search-result-container">
+                <ul class="updates__list" data-visual-template="row">
+                    <li class="updates__item">
+                        <a href="javaccript:void(0)" class="updates__link">
+                            <div class="item__head" style="background-color: #E65907;">Общие регламенты БКК</div>
+                            <div class="item__body">
+                                <div class="item__title"><b>Планирование</b> и отчетность в БКК</div>
+                                <div class="item__descr">
+                                    Ёмкое и полезное описание в две-три строки небольшим кеглем. Ёмкое и полезное
+                                    описание в
+                                    две-три строки небольшим кеглем.
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="updates__item">
+                        <a href="javaccript:void(0)" class="updates__link">
+                            <div class="item__head" style="background-color: #0097D8;">Планирование, управление и
+                                отчетность
+                            </div>
+                            <div class="item__body">
+                                <div class="item__title"><b>Планирование</b> и отчетность в БКК</div>
+                                <div class="item__descr">
+                                    Состоявшийся в компании переход от однонаправленной действий к стратегическому
+                                    планированию...
+                                </div>
+                                <div class="card__descr_w">
+                                    <div class="card__descr">7 материалов</div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="updates__item">
+                        <a href="javaccript:void(0)" class="updates__link">
+                            <div class="item__head" style="background-color: #0097D8;">Экосистема БКК</div>
+                            <div class="item__body">
+                                <div class="item__title"><b>Планирование</b> закупок</div>
+                            </div>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </section>
+    </div>
+</main>
+@@include('./html/footer.html')
