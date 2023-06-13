@@ -63,4 +63,40 @@ document.addEventListener('click', (e) => {
             // trigger: "click"
         });
     })
-})()
+})();
+
+
+
+// Функция для форматирования времени в формат "0:30"
+function formatTime(seconds) {
+    const minutes = Math.floor(seconds / 60);
+    const remainingSeconds = seconds % 60;
+    const formattedMinutes = String(minutes).padStart(2, '0');
+    const formattedSeconds = String(remainingSeconds).padStart(2, '0');
+    return `${formattedMinutes}:${formattedSeconds}`;
+}
+
+const players = Plyr.setup('[data-id="player"]');
+players.forEach(player => {
+    const durationElement = player.elements.wrapper.closest('.video-segment').querySelector('.video-segment__time')
+    // Ожидание события "loadedmetadata", которое срабатывает после загрузки метаданных видео
+    player.on('loadedmetadata', event => {
+        // Получение продолжительности видео в секундах
+        const duration = Math.floor(event.detail.plyr.duration);
+        // Преобразование продолжительности в формат "0:30"
+        const formattedDuration = formatTime(duration);
+        // Вывод значения продолжительности в отдельное место на странице
+        if (durationElement) {
+            durationElement.textContent = formattedDuration;
+        }
+    });
+
+    player.on('play', event => {
+        const pausedPlayers = players.filter(item => item != event.detail.plyr);
+        pausedPlayers.forEach(item => item.pause());
+        if (durationElement) {
+            durationElement.classList.add('hide');
+        }
+    });
+});
+
