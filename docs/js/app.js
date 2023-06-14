@@ -31,6 +31,17 @@ document.addEventListener('click', (e) => {
         const closedBanner = target.closest('.closed-banner');
         closedBanner.classList.add('hide');
     }
+
+    if (target.closest('[data-open-modal]')) {
+        const modalId = target.closest('[data-open-modal]').dataset.openModal;
+        const currenModal = document.querySelector(`[data-modal="${modalId}"]`)
+        if (currenModal) currenModal.classList.add('show');
+    }
+
+    if (target.closest('[data-close-modal]') ||
+        (target.closest('.presintation__modal-slider') && !target.closest('.presintation__slider-container'))) {
+        document.querySelector('.presintation__modal-slider.show')?.classList.remove('show');
+    }
 });
 
 
@@ -77,26 +88,47 @@ function formatTime(seconds) {
 }
 
 const players = Plyr.setup('[data-id="player"]');
-players.forEach(player => {
-    const durationElement = player.elements.wrapper.closest('.video-segment').querySelector('.video-segment__time')
-    // Ожидание события "loadedmetadata", которое срабатывает после загрузки метаданных видео
-    player.on('loadedmetadata', event => {
-        // Получение продолжительности видео в секундах
-        const duration = Math.floor(event.detail.plyr.duration);
-        // Преобразование продолжительности в формат "0:30"
-        const formattedDuration = formatTime(duration);
-        // Вывод значения продолжительности в отдельное место на странице
-        if (durationElement) {
-            durationElement.textContent = formattedDuration;
-        }
-    });
+if (players && players.length > 0) {
+    players.forEach(player => {
+        const durationElement = player.elements.wrapper.closest('.video-segment').querySelector('.video-segment__time')
+        // Ожидание события "loadedmetadata", которое срабатывает после загрузки метаданных видео
+        player.on('loadedmetadata', event => {
+            // Получение продолжительности видео в секундах
+            const duration = Math.floor(event.detail.plyr.duration);
+            // Преобразование продолжительности в формат "0:30"
+            const formattedDuration = formatTime(duration);
+            // Вывод значения продолжительности в отдельное место на странице
+            if (durationElement) {
+                durationElement.textContent = formattedDuration;
+            }
+        });
 
-    player.on('play', event => {
-        const pausedPlayers = players.filter(item => item != event.detail.plyr);
-        pausedPlayers.forEach(item => item.pause());
-        if (durationElement) {
-            durationElement.classList.add('hide');
-        }
+        player.on('play', event => {
+            const pausedPlayers = players.filter(item => item != event.detail.plyr);
+            pausedPlayers.forEach(item => item.pause());
+            if (durationElement) {
+                durationElement.classList.add('hide');
+            }
+        });
     });
+}
+
+
+const swiper = new Swiper('.presintation__slider', {
+    // Default parameters
+    slidesPerView: 1,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
+    pagination: {
+        el: ".swiper-pagination",
+        type: "custom",
+        renderCustom: function (swiper, current, total) {
+
+            return 'Страница ' + current + ' из ' + total;
+        }
+    },
+
 });
-
