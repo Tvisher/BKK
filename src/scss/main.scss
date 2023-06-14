@@ -349,16 +349,30 @@ ul.sidebar__list {
   color: rgba(4, 19, 39, 0.8);
 }
 
-.closed-banner__link {
-  margin-top: 80px;
+.btn_blue {
+  will-change: transform;
   width: fit-content;
-  padding: 12px 24px;
+  padding: 11px 23px;
   background: #004596;
   border-radius: 14px;
   font-weight: 500;
   font-size: 23px;
   line-height: 30px;
   color: #ffffff;
+  border: 2px solid #004596;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out,
+    transform 0.2s ease-in-out;
+  &:hover {
+    color: #004596;
+    background-color: transparent;
+  }
+  &:active {
+    transform: translateY(3px);
+  }
+}
+
+.closed-banner__link {
+  margin-top: 80px;
 }
 
 .closed-banner__btn {
@@ -834,7 +848,7 @@ ul.sidebar__list {
     color: #041327;
     margin-bottom: 20px;
   }
-  a {
+  a:not([class]) {
     display: inline;
     text-decoration-line: underline;
     color: #004596;
@@ -986,7 +1000,7 @@ ul.sidebar__list {
   margin-bottom: 20px !important;
   display: flex;
   a {
-    text-decoration: none;
+    text-decoration: none !important;
     font-weight: 300;
     font-size: 23px !important;
     line-height: 20px !important;
@@ -1179,5 +1193,46 @@ ul.sidebar__list {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+  }
+}
+
+.article__doc {
+  margin: 20px 0;
+  background: #ecf1f6;
+  border-radius: 24px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 40px;
+  .doc__ico {
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+    background: rgba(0, 70, 150, 0.12);
+    border-radius: 50%;
+    margin-right: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .doc__btn {
+    margin-left: auto;
+  }
+  .data-name {
+    font-weight: 600;
+    font-size: 23px;
+    line-height: 36px;
+    color: #041327;
+    transition: color 0.2s ease-in-out;
+    &:hover {
+      color: #004596;
+    }
+  }
+
+  .data-descr {
+    font-weight: 300;
+    font-size: 23px;
+    line-height: 28px;
+    color: rgba(4, 19, 39, 0.8);
   }
 }
