@@ -1642,6 +1642,7 @@ ul.sidebar__list {
 
 .article__pagination {
   position: relative;
+  overflow: hidden;
   background: #ffffff;
   border-radius: 28px;
   margin: 20px 0;
@@ -1672,6 +1673,7 @@ ul.sidebar__list {
   font-size: 23px;
   line-height: 20px;
   margin-bottom: 40px;
+  transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
 .article__pagination .pagination-item__descr {
@@ -1694,6 +1696,11 @@ ul.sidebar__list {
   text-align: left;
 }
 
+.article__pagination .article__pagination-item._prev:hover .pagination-item__arrow {
+  transform: translateX(-20px);
+  color: #004596;
+}
+
 .article__pagination .article__pagination-item._prev .pagination-item__arrow {
   display: flex;
   align-items: center;
@@ -1713,6 +1720,11 @@ ul.sidebar__list {
 
 .article__pagination .article__pagination-item._next {
   text-align: right;
+}
+
+.article__pagination .article__pagination-item._next:hover .pagination-item__arrow {
+  transform: translateX(20px);
+  color: #004596;
 }
 
 .article__pagination .article__pagination-item._next .pagination-item__arrow {

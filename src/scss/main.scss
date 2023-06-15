@@ -774,6 +774,7 @@ ul.sidebar__list {
 }
 .article__pagination {
   position: relative;
+  overflow: hidden;
   &:before {
     content: "";
     position: absolute;
@@ -800,6 +801,7 @@ ul.sidebar__list {
     font-size: 23px;
     line-height: 20px;
     margin-bottom: 40px;
+    transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
   }
   .pagination-item__descr {
     margin-top: auto;
@@ -817,6 +819,12 @@ ul.sidebar__list {
   }
   .article__pagination-item {
     &._prev {
+      &:hover {
+        .pagination-item__arrow {
+          transform: translateX(-20px);
+          color: #004596;
+        }
+      }
       text-align: left;
       .pagination-item__arrow {
         display: flex;
@@ -836,6 +844,12 @@ ul.sidebar__list {
     }
     &._next {
       text-align: right;
+      &:hover {
+        .pagination-item__arrow {
+          transform: translateX(20px);
+          color: #004596;
+        }
+      }
       .pagination-item__arrow {
         justify-content: flex-end;
         display: flex;
