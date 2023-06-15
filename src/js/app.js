@@ -42,6 +42,16 @@ document.addEventListener('click', (e) => {
         (target.closest('.presintation__modal-slider') && !target.closest('.presintation__slider-container'))) {
         document.querySelector('.presintation__modal-slider.show')?.classList.remove('show');
     }
+
+    //логика работы табов
+    if (target.hasAttribute('data-tab-control')) {
+        const tabId = target.getAttribute('data-tab-control');
+        const state = {
+            page: `?${tabId}`
+        }
+        history.pushState(state, '', state.page);
+        openCurrnTab(target, tabId);
+    }
 });
 
 
@@ -115,20 +125,51 @@ if (players && players.length > 0) {
 
 
 const swiper = new Swiper('.presintation__slider', {
-    // Default parameters
     slidesPerView: 1,
+    effect: 'fade',
+    fadeEffect: {
+        crossFade: true
+    },
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
-
     pagination: {
         el: ".swiper-pagination",
         type: "custom",
         renderCustom: function (swiper, current, total) {
-
             return 'Страница ' + current + ' из ' + total;
         }
     },
 
+});
+
+
+
+function openCurrnTab(btn, id) {
+    const activeTab = document.querySelector('[data-tab-content].active');
+    if (activeTab) { activeTab.classList.remove('active') }
+    const activeTabBtn = document.querySelector('[data-tab-control].active');
+    if (activeTabBtn) { activeTabBtn.classList.remove('active') }
+    btn.classList.add('active');
+    const tabContentWhatINeed = document.querySelector(`[data-tab-content="${id}"]`);
+    if (tabContentWhatINeed) tabContentWhatINeed.classList.add('active');
+}
+
+function tabLoad() {
+    var tabId = location.search.split('').splice(1).join('').split('&')[0];
+    const firstTab = document.querySelector('[data-tab-control]');
+    if (firstTab && !tabId) {
+        const firstTab = document.querySelectorAll('[data-tab-control]')[0];
+        const firstTabId = firstTab.getAttribute('data-tab-control');
+        openCurrnTab(firstTab, firstTabId);
+    }
+    if (tabId) {
+        const btn = document.querySelector(`[data-tab-control="${tabId}"]`);
+        if (btn) openCurrnTab(btn, tabId);
+    }
+}
+tabLoad();
+window.addEventListener('popstate', () => {
+    tabLoad();
 });
