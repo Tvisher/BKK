@@ -1153,7 +1153,14 @@ ul.sidebar__list {
   }
 }
 
-.presintation__modal-slider {
+.modal-template {
+  z-index: 99;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(4, 19, 39, 0.8);
   overflow: auto;
   opacity: 0;
   visibility: hidden;
@@ -1163,6 +1170,9 @@ ul.sidebar__list {
     visibility: visible;
   }
   padding: 50px;
+}
+
+.presintation__modal-slider {
   .presintation__slider-container {
     max-width: 80%;
     margin: auto;
@@ -1170,13 +1180,6 @@ ul.sidebar__list {
   .presintation__slider-container {
     padding-top: 50%;
   }
-  z-index: 99;
-  position: fixed;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  background: rgba(4, 19, 39, 0.8);
 }
 
 .article__tags {
@@ -1495,5 +1498,193 @@ ul.sidebar__list {
 @media (max-width: 992px) {
   .bnr-item-events.vnutricom {
     display: none;
+  }
+}
+
+.modal-form {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  overflow: auto;
+  padding: 150px;
+}
+.modal-form__content {
+  position: relative;
+  padding: 48px;
+  background: #ffffff;
+  border-radius: 28px;
+  overflow: hidden;
+  max-width: 790px;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-form__form {
+  display: flex;
+  flex-direction: column;
+  .form-btn {
+    padding: 18px 60px;
+    font-weight: 500;
+    font-size: 23px;
+    line-height: 30px;
+    cursor: pointer;
+  }
+}
+
+.modal-form__close {
+  cursor: pointer;
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  svg {
+    will-change: transform;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  &:hover {
+    svg {
+      transform: scale(1.3);
+    }
+  }
+}
+
+.modal-form__title {
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 140%;
+  color: #041327;
+  margin-bottom: 24px;
+}
+
+.modal-form__descr {
+  font-weight: 300;
+  font-size: 23px;
+  line-height: 170%;
+  color: #041327;
+  margin-bottom: 28px;
+}
+
+.form-label {
+  width: 100%;
+  margin-bottom: 20px;
+  &._error {
+    .form-error {
+      display: block;
+    }
+    .form-input,
+    .form-textarea {
+      border-color: red;
+    }
+  }
+}
+.form-error {
+  font-size: 18px;
+  padding-left: 10px;
+  color: red;
+  display: none;
+}
+
+.form-input,
+.form-textarea {
+  font-weight: 400;
+  font-size: 23px;
+  padding: 21px 30px;
+  background: #ecf1f6;
+  border-radius: 12px;
+  width: 100%;
+  border: 2px solid transparent;
+  outline: none;
+}
+.form-textarea {
+  resize: vertical;
+  min-height: 160px;
+}
+
+.notification-template {
+  position: fixed;
+  bottom: 50px;
+  right: 57px;
+  left: 497px;
+  background: #45ae50;
+  border-radius: 20px;
+  padding: 24px 48px;
+  padding-right: 90px;
+  z-index: 90;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+  &.show {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+.notification-template__title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 120%;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+.notification-template__descr {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 120%;
+  color: #ffffff;
+  opacity: 0.5;
+}
+
+.notification-template__close {
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  svg {
+    will-change: transform;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  &:hover {
+    svg {
+      transform: scale(1.3);
+    }
+  }
+}
+
+.select2-dropdown {
+  // padding: 13px 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  box-shadow: 0px 0px 10px 1px rgba(34, 60, 80, 0.11);
+  border-radius: 12px;
+  overflow: hidden;
+  .select2-results__option {
+    padding: 6px 13px;
+    padding-left: 28px;
+  }
+  &.select2-dropdown--below {
+    transform: translateY(10px);
+  }
+
+  &.select2-dropdown--above {
+    transform: translateY(-10px);
+  }
+
+  .select2-results__option--highlighted.select2-results__option--selectable {
+    background-color: #93a645;
+  }
+  .select2-results > .select2-results__options {
+    max-height: fit-content;
   }
 }

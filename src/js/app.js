@@ -32,15 +32,22 @@ document.addEventListener('click', (e) => {
         closedBanner.classList.add('hide');
     }
 
+    // Открытие модального окна
     if (target.closest('[data-open-modal]')) {
         const modalId = target.closest('[data-open-modal]').dataset.openModal;
         const currenModal = document.querySelector(`[data-modal="${modalId}"]`)
         if (currenModal) currenModal.classList.add('show');
     }
 
+    // Закрытие модального окна
     if (target.closest('[data-close-modal]') ||
-        (target.closest('.presintation__modal-slider') && !target.closest('.presintation__slider-container'))) {
-        document.querySelector('.presintation__modal-slider.show')?.classList.remove('show');
+        (target.closest('.modal-template') && !target.closest('.modal-template__inner'))) {
+        document.querySelector('.modal-template.show')?.classList.remove('show');
+    }
+
+    // Закрытие уведомления
+    if (target.closest('.notification-template__close')) {
+        target.closest('.notification-template').classList.remove('show');
     }
 
     //логика работы табов
@@ -80,8 +87,6 @@ document.addEventListener('click', (e) => {
             allowHTML: true,
             content: tooltipContent,
             maxWidth: 450,
-            // hideOnClick: "toggle",
-            // trigger: "click"
         });
     })
 })();
@@ -97,6 +102,8 @@ function formatTime(seconds) {
     return `${formattedMinutes}:${formattedSeconds}`;
 }
 
+
+// Инит и настройка плагина видеоплеера
 const players = Plyr.setup('[data-id="player"]');
 if (players && players.length > 0) {
     players.forEach(player => {
@@ -112,7 +119,6 @@ if (players && players.length > 0) {
                 durationElement.textContent = formattedDuration;
             }
         });
-
         player.on('play', event => {
             const pausedPlayers = players.filter(item => item != event.detail.plyr);
             pausedPlayers.forEach(item => item.pause());
@@ -123,7 +129,7 @@ if (players && players.length > 0) {
     });
 }
 
-
+//Слайдер для презентаций
 const swiper = new Swiper('.presintation__slider', {
     slidesPerView: 1,
     effect: 'fade',
@@ -145,7 +151,7 @@ const swiper = new Swiper('.presintation__slider', {
 });
 
 
-
+//Логика для работы табов
 function openCurrnTab(btn, id) {
     const activeTab = document.querySelector('[data-tab-content].active');
     if (activeTab) { activeTab.classList.remove('active') }
@@ -155,7 +161,6 @@ function openCurrnTab(btn, id) {
     const tabContentWhatINeed = document.querySelector(`[data-tab-content="${id}"]`);
     if (tabContentWhatINeed) tabContentWhatINeed.classList.add('active');
 }
-
 function tabLoad() {
     var tabId = location.search.split('').splice(1).join('').split('&')[0];
     const firstTab = document.querySelector('[data-tab-control]');

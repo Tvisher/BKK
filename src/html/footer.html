@@ -1,5 +1,61 @@
 <footer> </footer>
 </body>
+<div class="modal-form modal-template" data-modal="feedback">
+    <div class="modal-form__content modal-template__inner">
+        <div class="modal-form__close" data-close-modal>
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="48" height="48" rx="24" fill="white" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M19.0607 16.9393C18.4749 16.3536 17.5251 16.3536 16.9393 16.9393C16.3536 17.5251 16.3536 18.4749 16.9393 19.0607L21.8787 24L16.9393 28.9393C16.3536 29.5251 16.3536 30.4749 16.9393 31.0607C17.5251 31.6464 18.4749 31.6464 19.0607 31.0607L24 26.1213L28.9393 31.0607C29.5251 31.6464 30.4749 31.6464 31.0607 31.0607C31.6464 30.4749 31.6464 29.5251 31.0607 28.9393L26.1213 24L31.0607 19.0607C31.6464 18.4749 31.6464 17.5251 31.0607 16.9393C30.4749 16.3536 29.5251 16.3536 28.9393 16.9393L24 21.8787L19.0607 16.9393Z"
+                    fill="#004596" />
+            </svg>
+        </div>
+        <div class="modal-form__title">
+            Обратная связь<br> по «Большой книге БКК»
+        </div>
+        <div class="modal-form__descr">
+            Нам очень важно знать ваше мнение о сервисе и его материалах. Если у вас есть вопросы и предложения, просим
+            вас заполнить форму ниже.
+        </div>
+        <form action="#" class="modal-form__form" id="feedback-form">
+            <label class="form-label _error">
+                <input type="text" placeholder="ФИО" name="name" class="form-input">
+                <span class="form-error">Ошибка</span>
+            </label>
+
+            <label class="form-label">
+                <input type="text" placeholder="Электронная почта" name="email" class="form-input">
+                <span class="form-error">Ошибка</span>
+            </label>
+
+            <label class="form-label">
+                <input type="text" placeholder="Тема обращения" name="theme" class="form-input">
+                <span class="form-error">Ошибка</span>
+            </label>
+
+            <label class="form-label">
+                <textarea name="message" class="form-textarea" placeholder="Ваше предложение"></textarea>
+                <span class="form-error">Ошибка</span>
+            </label>
+            <button class="btn_blue form-btn" type="submit">Отправить</button>
+        </form>
+    </div>
+</div>
+
+<!-- Уведомление после отправки формы -->
+<div class="notification-template" data-form-succses>
+    <div class="notification-template__title">Спасибо за вашу обратную связь!</div>
+    <div class="notification-template__descr">В ближайшее время с вами свяжется администратор сервиса. Хорошего дня!
+    </div>
+    <div class="notification-template__close">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22.3996 9.6001L9.59961 22.4001" stroke="white" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round" />
+            <path d="M9.59961 9.6001L22.3996 22.4001" stroke="white" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round" />
+        </svg>
+    </div>
+</div>
 <script src="./js/app.js"></script>
 
 </html>
