@@ -1502,6 +1502,11 @@ ul.sidebar__list {
   height: 100%;
 }
 
+.updates__item .item__head,
+.updates__item .item__body {
+  padding: 20px 40px 40px;
+}
+
 .updates__item .item__head {
   padding: 20px 40px;
   color: #fff;
@@ -1519,11 +1524,6 @@ ul.sidebar__list {
   -webkit-box-orient: vertical;
   line-clamp: 2;
   box-orient: vertical;
-}
-
-.updates__item .item__head,
-.updates__item .item__body {
-  padding: 20px 40px 40px;
 }
 
 .updates__item .item__body {
@@ -1566,12 +1566,16 @@ ul.sidebar__list {
 
 .updates__controls.search-page {
   margin-top: 40px;
-  margin-bottom: 25px;
   margin-left: 0;
 }
 
 .updates__controls.search-page .controls-btns {
   margin-left: auto;
+  margin-bottom: 25px;
+}
+
+.updates__controls.search-page .select__wrapper {
+  margin-bottom: 25px;
 }
 
 .select__wrapper:not(:last-child) {
@@ -1795,6 +1799,8 @@ ul.sidebar__list {
 
 .custom-tippy .custom-tippy__head {
   margin-bottom: 20px;
+  display: flex;
+  align-items: center;
 }
 
 .custom-tippy .custom-tippy__head:empty {
@@ -1806,11 +1812,6 @@ ul.sidebar__list {
   font-size: 20px;
   line-height: 20px;
   text-transform: uppercase;
-}
-
-.custom-tippy .custom-tippy__head {
-  display: flex;
-  align-items: center;
 }
 
 .custom-tippy .custom-tippy__ico {
@@ -1917,8 +1918,9 @@ ul.sidebar__list {
 }
 
 .breadcrumbs {
+  padding-left: 0 !important;
+  flex-wrap: wrap;
   margin: 0 !important;
-  margin-bottom: 20px !important;
   display: flex;
 }
 
@@ -1932,6 +1934,7 @@ ul.sidebar__list {
 
 .breadcrumbs li {
   margin: 0 !important;
+  margin-bottom: 20px !important;
   position: relative;
   line-height: 100% !important;
 }
@@ -2182,6 +2185,7 @@ ul.sidebar__list {
 }
 
 .icons-list {
+  padding-left: 0 !important;
   margin: 40px 0 !important;
 }
 
@@ -2268,8 +2272,10 @@ ul.sidebar__list {
 }
 
 .article__tabs {
-  border-bottom: 1px solid #e4ebf2;
+  flex-wrap: wrap;
   display: flex;
+  overflow: auto;
+  border-bottom: 1px solid #e4ebf2;
 }
 
 .article__tabs .article__tab-btn {
@@ -2320,18 +2326,12 @@ ul.sidebar__list {
   margin: 40px 0;
 }
 
-.bnr-item-events.vnutricom {
-  min-height: 488px !important;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
 .modal-form {
   display: flex;
   align-items: flex-start;
   justify-content: center;
   overflow: auto;
-  padding: 150px;
+  padding: 50px;
 }
 
 .modal-form__content {
@@ -2521,7 +2521,17 @@ ul.sidebar__list {
   max-height: fit-content;
 }
 
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  display: none;
+}
+
 @media (max-width: 1890px) {
+  .notification-template {
+    left: 427px;
+    right: 20px;
+  }
+
   .sidebar {
     padding: 20px;
     width: 400px;
@@ -2529,6 +2539,7 @@ ul.sidebar__list {
 
   .sidebar-item__inner {
     left: 400px;
+    width: 400px;
   }
 
   .sidebar-item__inner {
@@ -2569,9 +2580,30 @@ ul.sidebar__list {
   .closed-banner__descr {
     max-width: 45%;
   }
+
+  .closed-banner__title br,
+  .closed-banner__descr br {
+    display: none;
+  }
+
+  .closed-banner__title {
+    font-size: 26px;
+  }
+
+  .closed-banner__descr {
+    font-size: 18px;
+  }
+
+  .closed-banner__link {
+    margin-top: 40px;
+  }
 }
 
 @media (max-width: 1700px) {
+  .fill-block {
+    padding: 20px;
+  }
+
   .updates__item .item__head,
   .updates__item .item__body {
     padding: 20px;
@@ -2606,12 +2638,97 @@ ul.sidebar__list {
     font-size: 19px;
   }
 
-  .materials__cards .materials__card {
+  .materials__cards .materials__card,
+  .closed-banner {
     padding: 20px;
+  }
+
+  .article-container,
+  .article__pagination .article__pagination-item {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 1600px) {
+  .article__tabs .article__tab-btn:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  .article__tabs .article__tab-btn {
+    padding-bottom: 20px;
   }
 }
 
 @media (max-width: 1500px) {
+  .custom-tippy {
+    padding: 20px;
+  }
+
+  .custom-tippy .custom-tippy__title {
+    font-size: 18px;
+  }
+
+  .custom-tippy .custom-tippy__body {
+    font-size: 18px;
+  }
+
+  .custom-tippy .custom-tippy__ico {
+    width: 24px;
+    height: 24px;
+  }
+
+  .custom-tippy .custom-tippy__head {
+    margin-bottom: 15px;
+  }
+
+  .modal-form__content {
+    padding: 30px;
+  }
+
+  .form-input,
+  .form-textarea {
+    font-size: 20px;
+  }
+
+  .form-input,
+  .form-textarea {
+    padding: 18px;
+  }
+
+  .modal-form__title {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+
+  .modal-form__descr {
+    font-size: 18px;
+  }
+
+  .notification-template {
+    padding-left: 30px;
+    left: 370px;
+  }
+
+  .notification-template__title {
+    font-size: 20px;
+  }
+
+  .notification-template__descr {
+    font-size: 18px;
+  }
+
+  .icons-list.vertical .icons-item__title {
+    font-size: 22px;
+  }
+
+  .fill-block__title {
+    font-size: 22px;
+  }
+
+  .fill-block__text {
+    font-size: 18px;
+  }
+
   .updates__list[data-visual-template=grid] .updates__item {
     width: calc(50% - 20px);
   }
@@ -2623,17 +2740,188 @@ ul.sidebar__list {
   .section-title__wrapper {
     flex-wrap: wrap;
   }
-}
 
-@media (max-width: 1200px) {
-  .bnr-item-events.vnutricom {
-    min-height: 403px !important;
+  .closed-banner__btn {
+    top: 20px;
+    right: 20px;
+  }
+
+  .sidebar-item .menu-item__link,
+  .sidebar-item__inner .inner__link {
+    font-size: 18px;
+  }
+
+  .sidebar__cat-title,
+  .sidebar-item__inner .inner__title {
+    font-size: 19px;
+  }
+
+  .sidebar__title {
+    font-size: 24px;
+  }
+
+  .sidebar {
+    width: 350px;
+  }
+
+  .sidebar-item__inner {
+    left: 350px;
+    width: 350px;
+  }
+
+  .sidebar-item__inner .inner__descr {
+    font-size: 18px;
+  }
+
+  .content-zone {
+    padding-left: 370px;
+  }
+
+  .header__search .search__input {
+    font-size: 20px;
+    padding: 18px 20px;
+    padding-left: 70px;
+  }
+
+  .search-result__enpty {
+    height: 300px;
+  }
+
+  .main-title {
+    font-size: 32px;
+  }
+
+  .article__pagination .pagination-item__title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .article-data {
+    font-size: 20px;
+  }
+
+  .article__doc {
+    padding: 20px;
+  }
+
+  .article__doc .doc__ico {
+    width: 60px;
+    height: 60px;
+  }
+
+  .article__doc .data-name {
+    font-size: 20px;
+    line-height: 120%;
+  }
+
+  .article__doc .data-descr {
+    font-size: 18px;
+  }
+
+  .btn_blue {
+    font-size: 20px;
+  }
+
+  .article-container ol li,
+  .article-container ul li {
+    font-size: 20px;
+  }
+
+  .article-container p {
+    font-size: 20px;
+  }
+
+  .icons-item__ico {
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+  }
+
+  .icons-item__text {
+    font-size: 20px;
+  }
+
+  .section-title {
+    margin-bottom: 20px;
+  }
+
+  .article__tabs {
+    font-size: 20px;
+    border: none;
+    margin-bottom: -20px;
+  }
+
+  .article__tabs .article__tab-btn {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e4ebf2;
+    margin-bottom: 20px;
   }
 }
 
-@media (max-width: 992px) {
-  .bnr-item-events.vnutricom {
-    display: none;
+@media (max-width: 1360px) {
+  .header {
+    margin-bottom: 20px;
+  }
+
+  .icons-item__text {
+    font-size: 18px;
+  }
+
+  .article-container ol,
+  .article-container ul {
+    padding-left: 24px;
+  }
+
+  .article-container ol li,
+  .article-container ul li {
+    font-size: 18px;
+  }
+
+  .presintation__slider .swiper-pagination {
+    font-size: 18px;
+  }
+
+  .article-data {
+    font-size: 18px;
+  }
+
+  .main-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .second-title {
+    font-size: 26px;
+  }
+
+  .updates__controls.search-page {
+    flex-wrap: wrap;
+  }
+
+  .article__tags .article__tag {
+    font-size: 18px;
+    padding: 7px 15px;
+  }
+
+  .article-container p {
+    font-size: 18px;
+  }
+
+  .breadcrumbs a {
+    font-size: 19px !important;
+  }
+
+  .article__pagination .pagination-item__title {
+    font-size: 20px;
+  }
+
+  .article__pagination .pagination-item__arrow {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .article__pagination .pagination-item__descr {
+    font-size: 18px;
   }
 }
 
