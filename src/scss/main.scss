@@ -329,8 +329,7 @@ ul.sidebar__list {
   margin-right: -57px;
   margin-top: -30px;
   margin-left: -57px;
-
-  padding-left: 27px;
+  padding-left: 57px;
   padding-right: 57px;
   padding-top: 26px;
   padding-bottom: 26px;
@@ -508,6 +507,7 @@ ul.sidebar__list {
 }
 
 .materials__cards {
+  flex-wrap: wrap;
   display: flex;
   margin-right: -10px;
   margin-left: -10px;
@@ -526,6 +526,7 @@ ul.sidebar__list {
     padding: 40px;
     border-radius: 16px;
     margin: 0 10px;
+    margin-bottom: 30px;
     width: calc(33.33% - 20px);
     background-color: #fff;
     position: relative;
@@ -593,7 +594,7 @@ ul.sidebar__list {
   margin-left: 0;
 }
 .updates {
-  padding-top: 75px;
+  padding-top: 45px;
 }
 .updates__controls {
   .select2-container {
@@ -1623,6 +1624,7 @@ ul.sidebar__list {
 }
 
 .form-label {
+  display: block;
   width: 100%;
   margin-bottom: 20px;
   &._error {
@@ -1726,6 +1728,8 @@ ul.sidebar__list {
     word-break: break-all;
     padding: 6px 13px;
     padding-left: 28px;
+    font-size: 20px;
+    line-height: 120%;
   }
   &.select2-dropdown--below {
     transform: translateY(10px);
@@ -1749,6 +1753,7 @@ ul.sidebar__list {
     margin-top: -20px;
     margin-left: -27px;
     padding-top: 20px;
+    padding-left: 27px;
     padding-bottom: 20px;
     padding-right: 20px;
   }
