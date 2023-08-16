@@ -6,14 +6,15 @@
     <div class="header__btns">
         <a href="javaccript:void(0)" class="header__btn _favorites">
             <div class="header__btn_ico">
-                <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="26" height="29" viewBox="0 0 26 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
-                        d="M18.7998 42.9388V17.2222C18.7998 15.9949 19.7947 15 21.022 15H38.9776C40.2049 15 41.1998 15.9949 41.1998 17.2222V42.9388C41.1998 44.8302 38.9874 45.8569 37.5429 44.6358L29.9998 38.259L22.4567 44.6358C21.0122 45.8569 18.7998 44.8302 18.7998 42.9388Z"
+                        d="M3.29288 25.5751V4.22222C3.29288 2.99492 4.28781 2 5.51511 2H20.484C21.7113 2 22.7062 2.99492 22.7062 4.22222V25.5751C22.7062 27.4666 20.4938 28.4933 19.0493 27.2722L12.9996 22.1578L6.94977 27.2722C5.50532 28.4933 3.29288 27.4666 3.29288 25.5751Z"
                         fill="#004596" stroke="#004596" stroke-width="2.22222" stroke-linejoin="round" />
                 </svg>
+
             </div>
         </a>
-        <a href="javaccript:void(0)" class="header__btn _notifications">
+        <div class="header__btn _notifications" id="notification-show">
             <div class="header__btn_ico">
                 <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -27,8 +28,28 @@
                         d="M22.8839 34C22.5908 34.5051 22.1703 34.9244 21.6642 35.2159C21.1582 35.5073 20.5845 35.6608 20.0005 35.6608C19.4166 35.6608 18.8428 35.5073 18.3368 35.2159C17.8308 34.9244 17.4102 34.5051 17.1172 34"
                         stroke="#004596" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
-                <div class="notifications__count">99+</div>
             </div>
-        </a>
+            <div class="notifications__count">99</div>
+            <div class="notifications__dropped-list">
+                <a href="javaccript:void(0)" class="notification__item">
+                    <div class="notification-date">26 ноября 2022</div>
+                    <div class="notification-name">Добавлена новая версия шаблона «Паспорт проекта»</div>
+                </a>
+
+                <a href="javaccript:void(0)" class="notification__item">
+                    <div class="notification-date">26 ноября 2022</div>
+                    <div class="notification-name">Добавлена новая версия шаблона «Паспорт проекта»</div>
+                </a>
+                <a href="javaccript:void(0)" class="notification__item">
+                    <div class="notification-date">26 ноября 2022</div>
+                    <div class="notification-name">Рекомендуем к прочтению материал «Правила работы компании во время
+                        пандемии Covid 2020»</div>
+                </a>
+
+                <div class="notifications__footer">
+                    <a href="javaccript:void(0)" class="notifications__all">Все уведомления </a>
+                </div>
+            </div>
+        </div>
     </div>
 </header>

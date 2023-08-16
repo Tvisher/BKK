@@ -59,6 +59,19 @@ document.addEventListener('click', (e) => {
         history.pushState(state, '', state.page);
         openCurrnTab(target, tabId);
     }
+
+    //логика работы списка уведомлений в шапке
+    if (document.querySelector('.notifications__dropped-list.show') && !target.closest('.notifications__dropped-list')) {
+        document.querySelector('.notifications__dropped-list.show').classList.remove('show')
+        return
+    }
+    if (target.closest('#notification-show')) {
+        const notificationsDroppedList = target.closest('#notification-show').querySelector('.notifications__dropped-list');
+        if (target.closest('#notification-show') && !target.closest('.notifications__dropped-list')) {
+            notificationsDroppedList.classList.toggle('show');
+        }
+    }
+
 });
 
 

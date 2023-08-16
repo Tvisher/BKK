@@ -3141,6 +3141,7 @@ body {
 }
 
 .cat-ico {
+  flex-shrink: 0;
   display: block;
   margin-right: 16px;
   width: 28px;
@@ -3259,18 +3260,24 @@ ul.sidebar__list:nth-of-type(2)::before {
 }
 
 .sidebar-item__inner {
+  border-radius: 0px 24px 0px 0px;
   transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out, visibility 0.2s ease-in-out;
   transition-delay: 0.1s;
-  overflow: auto;
   opacity: 0;
   visibility: hidden;
-  padding: 40px;
+  padding: 32px;
+  padding-top: 48px;
   position: fixed;
   left: 440px;
-  top: 0;
-  height: 100vh;
-  width: 440px;
+  top: 120px;
+  height: calc(100vh - 120px);
+  width: 520px;
   background: #004596;
+}
+
+.sidebar-item__inner .sidebar-item__inner-content {
+  overflow: auto;
+  height: 100%;
 }
 
 .sidebar-item__inner .inner__title {
@@ -3375,12 +3382,19 @@ ul.sidebar__list:nth-of-type(2)::before {
 }
 
 .header__btns .header__btn {
+  cursor: pointer;
+  border-radius: 12px;
+  transition: background-color 0.3s ease-in-out;
   flex-shrink: 0;
-  width: 60px;
-  height: 60px;
+  width: 68px;
+  height: 68px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.header__btns .header__btn:hover {
+  background: rgba(228, 234, 239, 0.6);
 }
 
 .header__btns .header__btn svg {
@@ -3390,13 +3404,21 @@ ul.sidebar__list:nth-of-type(2)::before {
 }
 
 .header__btns .header__btn .header__btn_ico {
-  width: 60px;
-  height: 60px;
+  width: 26px;
+  height: 26px;
+}
+
+.header__btns .header__btn._notifications {
+  position: relative;
+}
+
+.header__btns .header__btn._notifications.current-page {
+  background: rgba(228, 234, 239, 0.6);
 }
 
 .header__btns .header__btn._notifications .header__btn_ico {
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   position: relative;
 }
 
@@ -3404,7 +3426,7 @@ ul.sidebar__list:nth-of-type(2)::before {
   padding: 2px 5px;
   position: absolute;
   top: -5px;
-  left: 20px;
+  right: -5px;
   font-weight: 700;
   font-size: 12px;
   line-height: 120%;
@@ -3412,7 +3434,7 @@ ul.sidebar__list:nth-of-type(2)::before {
   align-items: center;
   text-align: center;
   background: #e65907;
-  border: 1px solid #f5f7f9;
+  border: 4px solid #fff;
   border-radius: 22px;
   color: #ffffff;
 }
@@ -3515,7 +3537,6 @@ ul.sidebar__list:nth-of-type(2)::before {
   font-size: 23px;
   line-height: 30px;
   color: #004596;
-  padding: 11px;
   padding-left: 0;
   padding-right: 52px;
   position: relative;
@@ -3579,6 +3600,7 @@ ul.sidebar__list:nth-of-type(2)::before {
 .materials__cards .materials__card {
   will-change: transform;
   transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+  box-shadow: 0px 4px 24px 0px rgba(0, 76, 167, 0.08);
   padding: 40px;
   border-radius: 16px;
   margin: 0 10px;
@@ -3589,12 +3611,11 @@ ul.sidebar__list:nth-of-type(2)::before {
 }
 
 .materials__cards .materials__card:hover {
-  box-shadow: 0px 9px 13px 0px rgba(0, 0, 0, 0.15);
-  transform: translateY(5px);
+  transform: translateY(-5px);
 }
 
 .materials__cards .materials__card:hover::before {
-  transform: translateY(-5px);
+  transform: translateY(15px);
 }
 
 .materials__cards .materials__card::before {
@@ -4939,6 +4960,125 @@ ul.sidebar__list:nth-of-type(2)::before {
   /* 142.857% */
 }
 
+@keyframes fromOpacity {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.new-notification {
+  width: 720px;
+  display: flex;
+  align-items: center;
+  padding: 30px;
+}
+
+.new-notification .notification-template__descr {
+  color: #041327;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  /* 32px */
+}
+
+.new-notification .btn_blue {
+  padding: 8px 24px;
+  font-size: 20px;
+}
+
+.new-notification .notification-template__close {
+  right: 10px;
+  top: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+.new-notification .notification-template__close svg {
+  width: 100%;
+  height: 100%;
+}
+
+.notification-template_ico {
+  flex-shrink: 0;
+  margin-right: 24px;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background-color: rgba(0, 70, 150, 0.12);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.notification-template_ico svg {
+  width: 29px;
+  height: 29px;
+}
+
+.notifications__dropped-list {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  bottom: -8px;
+  transform: translateY(100%);
+  width: 542px;
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: 0px 0px 60px 0px rgba(16, 56, 103, 0.16);
+  z-index: 100;
+}
+
+.notifications__dropped-list.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.notifications__dropped-list .notification__item {
+  border-bottom: 1px solid var(--stroke, #e4ebf2);
+  padding: 20px 32px;
+  color: #041327;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.notifications__dropped-list .notification__item .notification-name {
+  transition: color 0.3s ease-in-out;
+}
+
+.notifications__dropped-list .notification__item:hover {
+  background: rgba(228, 235, 242, 0.4);
+}
+
+.notifications__dropped-list .notification__item:hover .notification-name {
+  color: #004596;
+}
+
+.notifications__dropped-list .notification-date {
+  opacity: 0.4;
+  margin-bottom: 12px;
+}
+
+.notifications__dropped-list .notifications__footer {
+  padding: 24px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.notifications__dropped-list .notifications__all {
+  color: #004596;
+}
+
 @media (min-width: 480px) {
   .plyr__captions {
     font-size: 15px;
@@ -4990,14 +5130,14 @@ ul.sidebar__list:nth-of-type(2)::before {
     height: 24px;
   }
 
+  .header__btns .header__btn {
+    width: 60px;
+    height: 60px;
+  }
+
   .header__search .search__input {
     padding-left: 70px;
     font-size: 17px;
-  }
-
-  .notification-template {
-    left: 427px;
-    right: 20px;
   }
 
   .sidebar {
@@ -5016,7 +5156,8 @@ ul.sidebar__list:nth-of-type(2)::before {
 
   .sidebar-item__inner {
     left: 400px;
-    width: 400px;
+    top: 100px;
+    height: calc(100vh - 100px);
   }
 
   .sidebar-item__inner {
@@ -5182,7 +5323,6 @@ ul.sidebar__list:nth-of-type(2)::before {
 
   .notification-template {
     padding-left: 30px;
-    left: 370px;
   }
 
   .notification-template__title {
@@ -5234,7 +5374,7 @@ ul.sidebar__list:nth-of-type(2)::before {
 
   .sidebar-item__inner {
     left: 350px;
-    width: 350px;
+    width: 450px;
   }
 
   .sidebar-item__inner .inner__descr {
