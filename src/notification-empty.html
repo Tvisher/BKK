@@ -1,0 +1,20 @@
+@@include('./html/head.html')
+<main>
+    @@include('./html/sidebar.html')
+    <div class="content-zone">
+        @@include('./html/header.html')
+        <section class="search">
+            <h2 class="section-title">Уведомления</h2>
+            <div class="search-result">
+                <div class="search-result__enpty notification__enpty">
+                    <div class="enpty__wrapper">
+                        <div class="empty-ico notification__empty-ico"></div>
+                        <div class="enpty__text">У вас пока нет уведомлений. Скоро здесь появятся уведомления о
+                            добавлении<br> в Большую книгу материалов, рекомендованных к прочтению.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+@@include('./html/footer.html')

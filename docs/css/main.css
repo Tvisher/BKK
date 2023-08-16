@@ -3314,6 +3314,10 @@ ul.sidebar__list:nth-of-type(2)::before {
   background: rgba(206, 226, 255, 0.1);
 }
 
+.search {
+  margin-top: 40px;
+}
+
 .content-zone {
   width: 100%;
   background: #e3eaf1;
@@ -3972,12 +3976,16 @@ ul.sidebar__list:nth-of-type(2)::before {
 .search-result__enpty {
   background: #ffffff;
   border-radius: 16px;
-  height: 540px;
+  height: 670px;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+
+.search-result__enpty.notification__enpty {
+  height: 773px;
 }
 
 .empty-ico {
@@ -3989,6 +3997,12 @@ ul.sidebar__list:nth-of-type(2)::before {
   background-size: contain;
   background-position: center;
   margin-bottom: 30px;
+}
+
+.empty-ico.notification__empty-ico {
+  width: 40px;
+  height: 40px;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='40' height='41' viewBox='0 0 40 41' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg opacity='0.4'%3e%3cpath d='M33.8867 32.9888L8.8867 5.48877C8.72204 5.30316 8.52218 5.15207 8.2987 5.04427C8.07522 4.93648 7.83257 4.8741 7.58481 4.86077C7.33705 4.84745 7.0891 4.88342 6.85535 4.96663C6.62159 5.04983 6.40668 5.17859 6.22306 5.34547C6.03943 5.51234 5.89076 5.714 5.78565 5.93875C5.68053 6.16351 5.62108 6.40689 5.61072 6.6548C5.60036 6.9027 5.63931 7.1502 5.72531 7.38294C5.8113 7.61568 5.94264 7.82903 6.1117 8.01064L8.4242 10.556C7.40303 12.4605 6.87045 14.5887 6.8742 16.7497C6.8742 20.7466 6.15702 24.0935 4.80076 26.4263C4.52449 26.9024 4.37833 27.4427 4.37696 27.9932C4.37559 28.5436 4.51906 29.0847 4.79295 29.5622C5.06413 30.04 5.45793 30.4366 5.93368 30.7113C6.40942 30.986 6.94987 31.1287 7.4992 31.1247H13.1539C13.3129 32.8302 14.1028 34.4149 15.369 35.5685C16.6351 36.7221 18.2863 37.3615 19.9992 37.3615C21.7121 37.3615 23.3633 36.7221 24.6294 35.5685C25.8956 34.4149 26.6855 32.8302 26.8445 31.1247H27.1242L31.1117 35.5106C31.4479 35.8718 31.9129 36.0858 32.4058 36.1064C32.8988 36.127 33.38 35.9525 33.7451 35.6207C34.1102 35.2888 34.3299 34.8265 34.3564 34.3338C34.3829 33.8411 34.2141 33.3578 33.8867 32.9888ZM10.6242 16.7497C10.623 15.6691 10.809 14.5964 11.1742 13.5794L23.7148 27.3747H8.54295C9.9242 24.5622 10.6242 20.9903 10.6242 16.7497ZM19.9992 33.6247C19.2788 33.6249 18.5805 33.3761 18.0224 32.9205C17.4643 32.465 17.0808 31.8306 16.9367 31.1247H23.0617C22.9176 31.8306 22.5341 32.465 21.976 32.9205C21.4179 33.3761 20.7196 33.6249 19.9992 33.6247ZM13.8883 7.11689C13.7922 6.89016 13.7418 6.64673 13.7398 6.4005C13.7379 6.15427 13.7845 5.91007 13.8769 5.68184C13.9693 5.45361 14.1058 5.24582 14.2785 5.07034C14.4512 4.89485 14.6568 4.75511 14.8836 4.65908C16.8794 3.81437 19.0534 3.47703 21.2114 3.67719C23.3694 3.87735 25.4442 4.60877 27.2506 5.80616C29.0571 7.00354 30.5389 8.62961 31.5638 10.5392C32.5887 12.4488 33.1248 14.5825 33.1242 16.7497C33.1242 19.6685 33.4961 22.2075 34.2289 24.2935C34.311 24.5257 34.3465 24.7719 34.3334 25.0179C34.3204 25.2639 34.259 25.5049 34.1528 25.7272C34.0466 25.9495 33.8976 26.1487 33.7144 26.3134C33.5312 26.4781 33.3174 26.6051 33.0851 26.6872C32.8529 26.7693 32.6067 26.8048 32.3607 26.7917C32.1147 26.7787 31.8737 26.7173 31.6514 26.6111C31.4291 26.5049 31.2299 26.3559 31.0652 26.1727C30.9005 25.9896 30.7735 25.7757 30.6914 25.5435C29.8164 23.0497 29.3742 20.0935 29.3742 16.7497C29.3748 15.2017 28.992 13.6776 28.2601 12.3135C27.5282 10.9495 26.4698 9.78786 25.1796 8.93246C23.8894 8.07705 22.4074 7.55445 20.866 7.41132C19.3246 7.26819 17.7717 7.50899 16.3461 8.1122C16.1193 8.20824 15.8759 8.25867 15.6297 8.26062C15.3835 8.26258 15.1393 8.21601 14.911 8.12359C14.6828 8.03117 14.475 7.89469 14.2995 7.72196C14.124 7.54923 13.9843 7.34363 13.8883 7.11689Z' fill='%23041327'/%3e%3c/g%3e%3c/svg%3e ");
 }
 
 .enpty__text {
@@ -4120,6 +4134,7 @@ ul.sidebar__list:nth-of-type(2)::before {
 }
 
 .article-container {
+  margin-top: 40px;
   background: #ffffff;
   border-radius: 28px;
   padding: 48px;
@@ -5079,6 +5094,72 @@ ul.sidebar__list:nth-of-type(2)::before {
   color: #004596;
 }
 
+.notification-item {
+  border-bottom: 1px solid rgba(245, 247, 249, 0.7);
+}
+
+.notification-item:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.notification-item:visited {
+  border-color: #e4ebf2;
+}
+
+.notification-item:visited .notification-item__wrapper {
+  background-color: #fff;
+}
+
+.notification-item .notification-item__wrapper {
+  padding: 25px 32px;
+  background-color: rgba(245, 247, 249, 0.7);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.notification-item .notification-item__ico {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-right: 24px;
+}
+
+.notification-item .notification-item__ico svg {
+  width: 100%;
+  height: 100%;
+}
+
+.notification-item .notification-item__text {
+  color: #041327;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 170%;
+  /* 34px */
+}
+
+.notification-item .notification-item__selection {
+  display: inline;
+  font-weight: 600;
+  color: #004596;
+}
+
+.notification-item .notification-item__date {
+  flex-shrink: 0;
+  color: #041327;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 20px;
+  /* 105.263% */
+  opacity: 0.4;
+  margin-left: auto;
+}
+
 @media (min-width: 480px) {
   .plyr__captions {
     font-size: 15px;
@@ -5115,6 +5196,10 @@ ul.sidebar__list:nth-of-type(2)::before {
 }
 
 @media (max-width: 1890px) {
+  .search {
+    margin-top: 20px;
+  }
+
   .header {
     margin-right: -20px;
     margin-top: -20px;
@@ -5161,7 +5246,8 @@ ul.sidebar__list:nth-of-type(2)::before {
   }
 
   .sidebar-item__inner {
-    padding: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .sidebar-item__inner .inner__link {
@@ -5471,8 +5557,8 @@ ul.sidebar__list:nth-of-type(2)::before {
     padding: 30px;
   }
 
-  .header {
-    margin-bottom: 20px;
+  .article-container {
+    margin-top: 20px;
   }
 
   .icons-item__text {
@@ -5534,6 +5620,20 @@ ul.sidebar__list:nth-of-type(2)::before {
 
   .article__pagination .pagination-item__descr {
     font-size: 18px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .notification-item .notification-item__wrapper {
+    padding: 20px;
+  }
+
+  .notification-item .notification-item__text {
+    font-size: 18px;
+  }
+
+  .notification-item .notification-item__date {
+    font-size: 17px;
   }
 }
 
