@@ -465,6 +465,9 @@ ul.sidebar__list {
   line-height: 42px;
   color: #041327;
   margin-bottom: 40px;
+  &._large {
+    font-size: 36px;
+  }
 }
 .section-title__link {
   font-weight: 400;
@@ -514,6 +517,8 @@ ul.sidebar__list {
   font-style: normal;
   font-weight: 400;
   line-height: 150%; /* 30px */
+  margin: 0;
+  margin-top: 20px;
 }
 
 .materials__cards {

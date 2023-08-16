@@ -3502,6 +3502,10 @@ ul.sidebar__list:nth-of-type(2)::before {
   margin-bottom: 40px;
 }
 
+.section-title._large {
+  font-size: 36px;
+}
+
 .section-title__link {
   font-weight: 400;
   font-size: 23px;
@@ -3556,6 +3560,8 @@ ul.sidebar__list:nth-of-type(2)::before {
   font-weight: 400;
   line-height: 150%;
   /* 30px */
+  margin: 0;
+  margin-top: 20px;
 }
 
 .materials__cards {
