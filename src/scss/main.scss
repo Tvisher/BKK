@@ -505,6 +505,16 @@ ul.sidebar__list {
     margin-right: 10px;
   }
 }
+.section-title__left {
+  padding-right: 120px;
+}
+.section-title__descr {
+  color: rgba(4, 19, 39, 0.6);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 30px */
+}
 
 .materials__cards {
   flex-wrap: wrap;

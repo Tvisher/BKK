@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Газпром нефть БКК</title>
+    <link rel="preload" href="./fonts/Inter-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Inter-Light.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Inter-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Inter-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/select2.js"></script>
+    <script src="./js/tippy-bundle.umd.min.js"></script>
+    <script src="./js/plyr.js"></script>
+    <script src="./js/swiper.js"></script>
+    <script> </script>
+</head>
+
+<body>
+<main>
+    <aside class="sidebar">
+    <div class="sidebar__content">
+        <a href="index.html" class="sidebar__logo">
+            <img src="img/main-logo.svg" alt="">
+        </a>
+
+        <ul class="sidebar__list">
+            <li class="sidebar-item blue">
+                <a href="javaccript:void(0)" class="menu-item__link">
+                    <span class="menu-item__marker">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M27 9H16.3337L12.865 6.4C12.5195 6.14087 12.0994 6.00054 11.6675 6H5C4.46957 6 3.96086 6.21071 3.58579 6.58579C3.21071 6.96086 3 7.46957 3 8V25C3 25.5304 3.21071 26.0391 3.58579 26.4142C3.96086 26.7893 4.46957 27 5 27H27.1112C27.612 26.9993 28.092 26.8001 28.4461 26.4461C28.8001 26.092 28.9993 25.612 29 25.1112V11C29 10.4696 28.7893 9.96086 28.4142 9.58579C28.0391 9.21071 27.5304 9 27 9Z"
+                                fill="#E95520" />
+                        </svg>
+                    </span>
+                    <span href="javaccript:void(0)" class="">Экосистема БКК</span>
+                </a>
+                <div class="sidebar-item__inner">
+                    <div class="inner__title">
+                        <span class="cat-ico">
+                            <svg width="28" height="29" viewBox="0 0 28 29" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M26.25 7.5V21.5C26.25 21.9641 26.0656 22.4092 25.7374 22.7374C25.4092 23.0656 24.9641 23.25 24.5 23.25H17.5C16.8038 23.25 16.1361 23.5266 15.6438 24.0188C15.1516 24.5111 14.875 25.1788 14.875 25.875C14.875 26.1071 14.7828 26.3296 14.6187 26.4937C14.4546 26.6578 14.2321 26.75 14 26.75C13.7679 26.75 13.5454 26.6578 13.3813 26.4937C13.2172 26.3296 13.125 26.1071 13.125 25.875C13.125 25.1788 12.8484 24.5111 12.3562 24.0188C11.8639 23.5266 11.1962 23.25 10.5 23.25H3.5C3.03587 23.25 2.59075 23.0656 2.26256 22.7374C1.93437 22.4092 1.75 21.9641 1.75 21.5V7.5C1.75 7.03587 1.93437 6.59075 2.26256 6.26256C2.59075 5.93437 3.03587 5.75 3.5 5.75H9.625C10.5533 5.75 11.4435 6.11875 12.0999 6.77513C12.7563 7.4315 13.125 8.32174 13.125 9.25V18.875C13.125 19.1071 13.2172 19.3296 13.3813 19.4937C13.5454 19.6578 13.7679 19.75 14 19.75C14.2321 19.75 14.4546 19.6578 14.6187 19.4937C14.7828 19.3296 14.875 19.1071 14.875 18.875V9.25C14.875 8.32174 15.2437 7.4315 15.9001 6.77513C16.5565 6.11875 17.4467 5.75 18.375 5.75H24.5C24.9641 5.75 25.4092 5.93437 25.7374 6.26256C26.0656 6.59075 26.25 7.03587 26.25 7.5Z"
+                                    fill="white" />
+                            </svg>
+                        </span>
+                        <span>Экосистема БКК</span>
+                    </div>
+                    <div class="inner__descr">
+                        Краткое и информативное описание раздела и материалов в нём для удобства навигирования
+                        по
+                        разделам при знакомстве с Большой книгой. Два-три предложения.
+                    </div>
+                    <div class="inner__links">
+                        <a href="javaccript:void(0)" class="inner__link">Оргструктура БКК</a>
+                        <a href="javaccript:void(0)" class="inner__link">
+                            Экосистема<br>
+                            корпоративных<br>
+                            коммуникаций
+                        </a>
+                        <a href="javaccript:void(0)" class="inner__link">
+                            Сотрудники прямого<br> подчинения ЗГД КК
+                        </a>
+                        <a href="javaccript:void(0)" class="inner__link">
+                            Департамент<br>
+                            информационной<br>
+                            политики
+                        </a>
+                        <a href="javaccript:void(0)" class="inner__link">
+                            Сотрудники прямого<br>
+                            подчинения ЗГД КК
+                        </a>
+                        <a href="javaccript:void(0)" class="inner__link">
+                            Управление<br>
+                            внутрикорпоративных<br>
+                            коммуникаций
+                        </a>
+                        <a href="javaccript:void(0)" class="inner__link">
+                            Программа социальных<br>
+                            инвестиций «Родные<br>
+                            города»
+                        </a>
+                        <a href="javaccript:void(0)" class="inner__link">
+                            Арктика Медиа
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li class="sidebar-item yellow">
+                <a href="javaccript:void(0)" class="menu-item__link">
+                    <span class="menu-item__marker">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M27 9H16.3337L12.865 6.4C12.5195 6.14087 12.0994 6.00054 11.6675 6H5C4.46957 6 3.96086 6.21071 3.58579 6.58579C3.21071 6.96086 3 7.46957 3 8V25C3 25.5304 3.21071 26.0391 3.58579 26.4142C3.96086 26.7893 4.46957 27 5 27H27.1112C27.612 26.9993 28.092 26.8001 28.4461 26.4461C28.8001 26.092 28.9993 25.612 29 25.1112V11C29 10.4696 28.7893 9.96086 28.4142 9.58579C28.0391 9.21071 27.5304 9 27 9Z"
+                                fill="#E95520" />
+                        </svg>
+                    </span>
+                    <span href="javaccript:void(0)" class="menu-item__name">Приоритетные<br> и циклические
+                        проекты</span>
+                </a>
+
+            </li>
+            <li class="sidebar-item light-blue">
+                <a href="javaccript:void(0)" class="menu-item__link">
+                    <span class="menu-item__marker">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M27 9H16.3337L12.865 6.4C12.5195 6.14087 12.0994 6.00054 11.6675 6H5C4.46957 6 3.96086 6.21071 3.58579 6.58579C3.21071 6.96086 3 7.46957 3 8V25C3 25.5304 3.21071 26.0391 3.58579 26.4142C3.96086 26.7893 4.46957 27 5 27H27.1112C27.612 26.9993 28.092 26.8001 28.4461 26.4461C28.8001 26.092 28.9993 25.612 29 25.1112V11C29 10.4696 28.7893 9.96086 28.4142 9.58579C28.0391 9.21071 27.5304 9 27 9Z"
+                                fill="#E95520" />
+                        </svg>
+                    </span>
+                    <span href="javaccript:void(0)" class="menu-item__name">Планирование,<br> управление и
+                        отчетность</span>
+                </a>
+            </li>
+            <li class="sidebar-item light-green">
+                <a href="javaccript:void(0)" class="menu-item__link">
+                    <span class="menu-item__marker">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M27 9H16.3337L12.865 6.4C12.5195 6.14087 12.0994 6.00054 11.6675 6H5C4.46957 6 3.96086 6.21071 3.58579 6.58579C3.21071 6.96086 3 7.46957 3 8V25C3 25.5304 3.21071 26.0391 3.58579 26.4142C3.96086 26.7893 4.46957 27 5 27H27.1112C27.612 26.9993 28.092 26.8001 28.4461 26.4461C28.8001 26.092 28.9993 25.612 29 25.1112V11C29 10.4696 28.7893 9.96086 28.4142 9.58579C28.0391 9.21071 27.5304 9 27 9Z"
+                                fill="#E95520" />
+                        </svg>
+                    </span>
+                    <span href="javaccript:void(0)" class="menu-item__name">Стратегии</span>
+                </a>
+            </li>
+            <li class="sidebar-item green">
+                <a href="javaccript:void(0)" class="menu-item__link">
+                    <span class="menu-item__marker">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M27 9H16.3337L12.865 6.4C12.5195 6.14087 12.0994 6.00054 11.6675 6H5C4.46957 6 3.96086 6.21071 3.58579 6.58579C3.21071 6.96086 3 7.46957 3 8V25C3 25.5304 3.21071 26.0391 3.58579 26.4142C3.96086 26.7893 4.46957 27 5 27H27.1112C27.612 26.9993 28.092 26.8001 28.4461 26.4461C28.8001 26.092 28.9993 25.612 29 25.1112V11C29 10.4696 28.7893 9.96086 28.4142 9.58579C28.0391 9.21071 27.5304 9 27 9Z"
+                                fill="#E95520" />
+                        </svg>
+                    </span>
+                    <span href="javaccript:void(0)" class="menu-item__name">Общие правила</span>
+                </a>
+            </li>
+        </ul>
+
+        <ul class="sidebar__list">
+            <li class="sidebar-item">
+                <a href="javaccript:void(0)" class="menu-item__link">
+                    <span class="menu-item__marker">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M27 9H16.3337L12.865 6.4C12.5195 6.14087 12.0994 6.00054 11.6675 6H5C4.46957 6 3.96086 6.21071 3.58579 6.58579C3.21071 6.96086 3 7.46957 3 8V25C3 25.5304 3.21071 26.0391 3.58579 26.4142C3.96086 26.7893 4.46957 27 5 27H27.1112C27.612 26.9993 28.092 26.8001 28.4461 26.4461C28.8001 26.092 28.9993 25.612 29 25.1112V11C29 10.4696 28.7893 9.96086 28.4142 9.58579C28.0391 9.21071 27.5304 9 27 9Z"
+                                fill="#E95520" />
+                        </svg>
+                    </span>
+                    <span class="menu-item__name">Регламенты</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a href="javaccript:void(0)" class="menu-item__link">
+                    <span class="menu-item__marker">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M27 9H16.3337L12.865 6.4C12.5195 6.14087 12.0994 6.00054 11.6675 6H5C4.46957 6 3.96086 6.21071 3.58579 6.58579C3.21071 6.96086 3 7.46957 3 8V25C3 25.5304 3.21071 26.0391 3.58579 26.4142C3.96086 26.7893 4.46957 27 5 27H27.1112C27.612 26.9993 28.092 26.8001 28.4461 26.4461C28.8001 26.092 28.9993 25.612 29 25.1112V11C29 10.4696 28.7893 9.96086 28.4142 9.58579C28.0391 9.21071 27.5304 9 27 9Z"
+                                fill="#E95520" />
+                        </svg>
+                    </span>
+                    <span class="menu-item__name">Шаблоны</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a href="javaccript:void(0)" class="menu-item__link">
+                    <span class="menu-item__marker">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M27 9H16.3337L12.865 6.4C12.5195 6.14087 12.0994 6.00054 11.6675 6H5C4.46957 6 3.96086 6.21071 3.58579 6.58579C3.21071 6.96086 3 7.46957 3 8V25C3 25.5304 3.21071 26.0391 3.58579 26.4142C3.96086 26.7893 4.46957 27 5 27H27.1112C27.612 26.9993 28.092 26.8001 28.4461 26.4461C28.8001 26.092 28.9993 25.612 29 25.1112V11C29 10.4696 28.7893 9.96086 28.4142 9.58579C28.0391 9.21071 27.5304 9 27 9Z"
+                                fill="#E95520" />
+                        </svg>
+                    </span>
+                    <span class="menu-item__name">Полезные инструменты</span>
+                </a>
+            </li>
+        </ul>
+        <div class="sidebar__otherts">
+            <a href="javaccript:void(0)" class="sidebar__other">О Большой книге</a>
+            <a href="javaccript:void(0)" class="sidebar__other">Корпоративный портал</a>
+            <a href="javaccript:void(0)" class="sidebar__other" data-open-modal="feedback">Вопросы и предложения</a>
+        </div>
+    </div>
+</aside>
+    <div class="content-zone">
+        <header class="header">
+    <form role="search" method="get" id="searchform" action="" class="header__search">
+        <button class="search__btn" type="submit"></button>
+        <input type="text" value="" name="s" id="s" class="search__input" placeholder="Искать материалы" />
+    </form>
+    <div class="header__btns">
+        <a href="javaccript:void(0)" class="header__btn _favorites">
+            <div class="header__btn_ico">
+                <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M18.7998 42.9388V17.2222C18.7998 15.9949 19.7947 15 21.022 15H38.9776C40.2049 15 41.1998 15.9949 41.1998 17.2222V42.9388C41.1998 44.8302 38.9874 45.8569 37.5429 44.6358L29.9998 38.259L22.4567 44.6358C21.0122 45.8569 18.7998 44.8302 18.7998 42.9388Z"
+                        fill="#004596" stroke="#004596" stroke-width="2.22222" stroke-linejoin="round" />
+                </svg>
+            </div>
+        </a>
+        <a href="javaccript:void(0)" class="header__btn _notifications">
+            <div class="header__btn_ico">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M30 13.334C30 10.6818 28.9464 8.13828 27.0711 6.26292C25.1957 4.38755 22.6522 3.33398 20 3.33398C17.3478 3.33398 14.8043 4.38755 12.9289 6.26292C11.0536 8.13828 10 10.6818 10 13.334C10 25.0007 5 28.334 5 28.334H35C35 28.334 30 25.0007 30 13.334Z"
+                        fill="#004596" stroke="#004596" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path
+                        d="M22.8839 34C22.5908 34.5051 22.1703 34.9244 21.6642 35.2159C21.1582 35.5073 20.5845 35.6608 20.0005 35.6608C19.4166 35.6608 18.8428 35.5073 18.3368 35.2159C17.8308 34.9244 17.4102 34.5051 17.1172 34"
+                        fill="#004596" />
+                    <path
+                        d="M22.8839 34C22.5908 34.5051 22.1703 34.9244 21.6642 35.2159C21.1582 35.5073 20.5845 35.6608 20.0005 35.6608C19.4166 35.6608 18.8428 35.5073 18.3368 35.2159C17.8308 34.9244 17.4102 34.5051 17.1172 34"
+                        stroke="#004596" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <div class="notifications__count">99+</div>
+            </div>
+        </a>
+    </div>
+</header>
+
+        <section class="updates">
+            <div class="section-title__wrapper">
+                <div class="section-title__left">
+                    <h2 class="section-title">Экосистема БКК</h2>
+                    <p class="section-title__descr">Здесь вы найдете список всех актуальных регламентов Блока
+                        корпоративных коммуникаций на текущий год, для удобства использования сгруппированных по
+                        ключевым подразделениям компании. Документы в этих разделах описывают и направляют ежедневные
+                        усилия всей нашей команды и каждого ее участника, делают нашу работу эффективной и системной.
+                    </p>
+                </div>
+                <div class="updates__controls">
+                    <div class="controls-btns">
+                        <div class="controls__btn active" data-visual="grid">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g opacity="0.8">
+                                    <path d="M11.6667 3.5H3.5V11.6667H11.6667V3.5Z" stroke="#041327" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M24.4997 3.5H16.333V11.6667H24.4997V3.5Z" stroke="#041327" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M24.4997 16.332H16.333V24.4987H24.4997V16.332Z" stroke="#041327"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M11.6667 16.332H3.5V24.4987H11.6667V16.332Z" stroke="#041327"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </g>
+                            </svg>
+
+                        </div>
+                        <div class="controls__btn" data-visual="row">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g opacity="0.8">
+                                    <path
+                                        d="M2.7998 20.9992L2.7998 17.7326C2.7998 17.485 3.04564 17.2476 3.48322 17.0726C3.92081 16.8976 4.5143 16.7992 5.13314 16.7992L21.4665 16.7992C22.0853 16.7992 22.6788 16.8976 23.1164 17.0726C23.554 17.2476 23.7998 17.485 23.7998 17.7326L23.7998 20.9992M2.7998 20.9992L2.7998 24.2659C2.7998 24.5134 3.04564 24.7508 3.48322 24.9259C3.92081 25.1009 4.5143 25.1992 5.13314 25.1992L21.4665 25.1992C22.0853 25.1992 22.6788 25.1009 23.1164 24.9259C23.554 24.7508 23.7998 24.5134 23.7998 24.2659L23.7998 20.9992"
+                                        stroke="#041327" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M2.7998 8.39766L2.7998 5.13099C2.7998 4.88345 3.04564 4.64606 3.48322 4.47102C3.92081 4.29599 4.5143 4.19766 5.13314 4.19766L21.4665 4.19765C22.0853 4.19765 22.6788 4.29599 23.1164 4.47102C23.554 4.64606 23.7998 4.88345 23.7998 5.13099L23.7998 8.39765M2.7998 8.39766L2.7998 11.6643C2.7998 11.9119 3.04564 12.1493 3.48322 12.3243C3.92081 12.4993 4.5143 12.5977 5.13314 12.5977L21.4665 12.5977C22.0853 12.5977 22.6788 12.4993 23.1164 12.3243C23.554 12.1493 23.7998 11.9119 23.7998 11.6643L23.7998 8.39765"
+                                        stroke="#041327" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </g>
+                            </svg>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <ul class="updates__list" data-visual-template="grid">
+                <li class="updates__item blue">
+                    <a href="javaccript:void(0)" class="updates__link">
+                        <div class="item__head">
+                            <div class="item__head-ico">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M27 9H16.3337L12.865 6.4C12.5195 6.14087 12.0994 6.00054 11.6675 6H5C4.46957 6 3.96086 6.21071 3.58579 6.58579C3.21071 6.96086 3 7.46957 3 8V25C3 25.5304 3.21071 26.0391 3.58579 26.4142C3.96086 26.7893 4.46957 27 5 27H27.1112C27.612 26.9993 28.092 26.8001 28.4461 26.4461C28.8001 26.092 28.9993 25.612 29 25.1112V11C29 10.4696 28.7893 9.96086 28.4142 9.58579C28.0391 9.21071 27.5304 9 27 9Z"
+                                        fill="#E95520" />
+                                </svg>
+                            </div>
+                            <span>
+                                Общие регламенты БКК
+                            </span>
+                        </div>
+                        <div class="item__body">
+                            <div class="item__title">Планирование<br> и отчетность в БКК</div>
+                            <div class="item__descr">
+                                Ёмкое и полезное описание в две-три строки небольшим кеглем. Ёмкое и полезное описание в
+                                две-три строки небольшим кеглем.
+                            </div>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="updates__item yellow">
+                    <a href="javaccript:void(0)" class="updates__link">
+                        <div class="item__head">
+                            <div class="item__head-ico">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M27 9H16.3337L12.865 6.4C12.5195 6.14087 12.0994 6.00054 11.6675 6H5C4.46957 6 3.96086 6.21071 3.58579 6.58579C3.21071 6.96086 3 7.46957 3 8V25C3 25.5304 3.21071 26.0391 3.58579 26.4142C3.96086 26.7893 4.46957 27 5 27H27.1112C27.612 26.9993 28.092 26.8001 28.4461 26.4461C28.8001 26.092 28.9993 25.612 29 25.1112V11C29 10.4696 28.7893 9.96086 28.4142 9.58579C28.0391 9.21071 27.5304 9 27 9Z"
+                                        fill="#E95520" />
+                                </svg>
+                            </div>
+                            <span>
+                                Экосистема БКК
+                            </span>
+                        </div>
+                        <div class="item__body">
+                            <div class="item__title">Экосистема корпоративных коммуникаций</div>
+                        </div>
+
+                    </a>
+                </li>
+
+                <li class="updates__item light-blue">
+                    <a href="javaccript:void(0)" class="updates__link">
+                        <div class="item__head">
+                            <div class="item__head-ico">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M27 9H16.3337L12.865 6.4C12.5195 6.14087 12.0994 6.00054 11.6675 6H5C4.46957 6 3.96086 6.21071 3.58579 6.58579C3.21071 6.96086 3 7.46957 3 8V25C3 25.5304 3.21071 26.0391 3.58579 26.4142C3.96086 26.7893 4.46957 27 5 27H27.1112C27.612 26.9993 28.092 26.8001 28.4461 26.4461C28.8001 26.092 28.9993 25.612 29 25.1112V11C29 10.4696 28.7893 9.96086 28.4142 9.58579C28.0391 9.21071 27.5304 9 27 9Z"
+                                        fill="#E95520" />
+                                </svg>
+                            </div>
+                            <span>
+                                Стратегическая цель и показатели БКК
+                            </span>
+                        </div>
+                        <div class="item__body">
+                            <div class="item__title">Коммуникационный цикл БКК</div>
+                            <div class="item__descr">
+                                Ёмкое и полезное описание в две-три строки небольшим кеглем.
+                            </div>
+                        </div>
+
+                    </a>
+                </li>
+
+                <li class="updates__item light-green">
+                    <a href="javaccript:void(0)" class="updates__link">
+                        <div class="item__head">
+                            <div class="item__head-ico">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M27 9H16.3337L12.865 6.4C12.5195 6.14087 12.0994 6.00054 11.6675 6H5C4.46957 6 3.96086 6.21071 3.58579 6.58579C3.21071 6.96086 3 7.46957 3 8V25C3 25.5304 3.21071 26.0391 3.58579 26.4142C3.96086 26.7893 4.46957 27 5 27H27.1112C27.612 26.9993 28.092 26.8001 28.4461 26.4461C28.8001 26.092 28.9993 25.612 29 25.1112V11C29 10.4696 28.7893 9.96086 28.4142 9.58579C28.0391 9.21071 27.5304 9 27 9Z"
+                                        fill="#E95520" />
+                                </svg>
+                            </div>
+                            <span>
+                                Сотрудники прямого подчинения ЗГД КК
+                            </span>
+                        </div>
+                        <div class="item__body">
+                            <div class="item__title">Функциональные направления деятельности сотрудников прямого
+                                подчинения</div>
+                            <div class="item__descr">
+                                Ёмкое и полезное описание в две-три строки небольшим кеглем.
+                            </div>
+                        </div>
+
+                    </a>
+                </li>
+
+                <li class="updates__item green">
+                    <a href="javaccript:void(0)" class="updates__link">
+                        <div class="item__head">
+                            <div class="item__head-ico">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M27 9H16.3337L12.865 6.4C12.5195 6.14087 12.0994 6.00054 11.6675 6H5C4.46957 6 3.96086 6.21071 3.58579 6.58579C3.21071 6.96086 3 7.46957 3 8V25C3 25.5304 3.21071 26.0391 3.58579 26.4142C3.96086 26.7893 4.46957 27 5 27H27.1112C27.612 26.9993 28.092 26.8001 28.4461 26.4461C28.8001 26.092 28.9993 25.612 29 25.1112V11C29 10.4696 28.7893 9.96086 28.4142 9.58579C28.0391 9.21071 27.5304 9 27 9Z"
+                                        fill="#E95520" />
+                                </svg>
+                            </div>
+                            <span>
+                                Планирование, управление и отчетность
+                            </span>
+                        </div>
+                        <div class="item__body">
+                            <div class="item__title">Практики регулярного менеджмента</div>
+                            <div class="item__descr">
+                                Ёмкое и полезное описание в две-три строки небольшим кеглем. Ёмкое и полезное описание в
+                                две-три строки небольшим кеглем.
+                            </div>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="updates__item">
+                    <a href="javaccript:void(0)" class="updates__link">
+                        <div class="item__head">
+                            <div class="item__head-ico">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M27 9H16.3337L12.865 6.4C12.5195 6.14087 12.0994 6.00054 11.6675 6H5C4.46957 6 3.96086 6.21071 3.58579 6.58579C3.21071 6.96086 3 7.46957 3 8V25C3 25.5304 3.21071 26.0391 3.58579 26.4142C3.96086 26.7893 4.46957 27 5 27H27.1112C27.612 26.9993 28.092 26.8001 28.4461 26.4461C28.8001 26.092 28.9993 25.612 29 25.1112V11C29 10.4696 28.7893 9.96086 28.4142 9.58579C28.0391 9.21071 27.5304 9 27 9Z"
+                                        fill="#E95520" />
+                                </svg>
+                            </div>
+                            <span>
+                                Шаблоны
+                            </span>
+                        </div>
+                        <div class="item__body">
+                            <div class="item__title">Паспорт проекта</div>
+                            <div class="item__descr">
+                                Ёмкое и полезное описание в две-три строки небольшим кеглем. Ёмкое и полезное описание в
+                                две-три строки небольшим кеглем.
+                            </div>
+                        </div>
+
+                    </a>
+                </li>
+
+                <li class="updates__item blue">
+                    <a href="javaccript:void(0)" class="updates__link">
+                        <div class="item__head">
+                            <div class="item__head-ico">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M27 9H16.3337L12.865 6.4C12.5195 6.14087 12.0994 6.00054 11.6675 6H5C4.46957 6 3.96086 6.21071 3.58579 6.58579C3.21071 6.96086 3 7.46957 3 8V25C3 25.5304 3.21071 26.0391 3.58579 26.4142C3.96086 26.7893 4.46957 27 5 27H27.1112C27.612 26.9993 28.092 26.8001 28.4461 26.4461C28.8001 26.092 28.9993 25.612 29 25.1112V11C29 10.4696 28.7893 9.96086 28.4142 9.58579C28.0391 9.21071 27.5304 9 27 9Z"
+                                        fill="#E95520" />
+                                </svg>
+                            </div>
+                            <span>
+                                Стратегии
+                            </span>
+                        </div>
+                        <div class="item__body">
+                            <div class="item__title">Стратегия реализации региональной политики «Газпром нефти»</div>
+                            <div class="item__descr">
+                                Ёмкое и полезное описание в две-три строки небольшим кеглем. Ёмкое и полезное ...
+                            </div>
+                        </div>
+
+                    </a>
+                </li>
+
+                <li class="updates__item yellow">
+                    <a href="javaccript:void(0)" class="updates__link">
+                        <div class="item__head">
+                            <div class="item__head-ico">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M27 9H16.3337L12.865 6.4C12.5195 6.14087 12.0994 6.00054 11.6675 6H5C4.46957 6 3.96086 6.21071 3.58579 6.58579C3.21071 6.96086 3 7.46957 3 8V25C3 25.5304 3.21071 26.0391 3.58579 26.4142C3.96086 26.7893 4.46957 27 5 27H27.1112C27.612 26.9993 28.092 26.8001 28.4461 26.4461C28.8001 26.092 28.9993 25.612 29 25.1112V11C29 10.4696 28.7893 9.96086 28.4142 9.58579C28.0391 9.21071 27.5304 9 27 9Z"
+                                        fill="#E95520" />
+                                </svg>
+                            </div>
+                            <span>
+                                Приоритетные и циклические проекты
+                            </span>
+                        </div>
+                        <div class="item__body">
+                            <div class="item__title">Кроссфункциональные проекты БКК на 2023 год</div>
+                            <div class="item__descr">
+                                Ёмкое и полезное описание в две-три строки небольшим кеглем. Ёмкое и полезное ...
+                            </div>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="updates__item green">
+                    <a href="javaccript:void(0)" class="updates__link">
+                        <div class="item__head">
+                            <div class="item__head-ico">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M27 9H16.3337L12.865 6.4C12.5195 6.14087 12.0994 6.00054 11.6675 6H5C4.46957 6 3.96086 6.21071 3.58579 6.58579C3.21071 6.96086 3 7.46957 3 8V25C3 25.5304 3.21071 26.0391 3.58579 26.4142C3.96086 26.7893 4.46957 27 5 27H27.1112C27.612 26.9993 28.092 26.8001 28.4461 26.4461C28.8001 26.092 28.9993 25.612 29 25.1112V11C29 10.4696 28.7893 9.96086 28.4142 9.58579C28.0391 9.21071 27.5304 9 27 9Z"
+                                        fill="#E95520" />
+                                </svg>
+                            </div>
+                            <span>Документооборот и переписка</span>
+                        </div>
+                        <div class="item__body">
+                            <div class="item__title">Правила коммуникации в нерабочее время</div>
+                            <div class="item__descr">
+                                Ёмкое и полезное описание в две-три строки небольшим кеглем. Ёмкое и полезное ...
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </div>
+</main>
+<footer> </footer>
+</body>
+<div class="modal-form modal-template" data-modal="feedback">
+    <div class="modal-form__content modal-template__inner">
+        <div class="modal-form__close" data-close-modal>
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="48" height="48" rx="24" fill="white" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M19.0607 16.9393C18.4749 16.3536 17.5251 16.3536 16.9393 16.9393C16.3536 17.5251 16.3536 18.4749 16.9393 19.0607L21.8787 24L16.9393 28.9393C16.3536 29.5251 16.3536 30.4749 16.9393 31.0607C17.5251 31.6464 18.4749 31.6464 19.0607 31.0607L24 26.1213L28.9393 31.0607C29.5251 31.6464 30.4749 31.6464 31.0607 31.0607C31.6464 30.4749 31.6464 29.5251 31.0607 28.9393L26.1213 24L31.0607 19.0607C31.6464 18.4749 31.6464 17.5251 31.0607 16.9393C30.4749 16.3536 29.5251 16.3536 28.9393 16.9393L24 21.8787L19.0607 16.9393Z"
+                    fill="#004596" />
+            </svg>
+        </div>
+        <div class="modal-form__title">
+            Обратная связь<br> по «Большой книге БКК»
+        </div>
+        <div class="modal-form__descr">
+            Нам очень важно знать ваше мнение о сервисе и его материалах. Если у вас есть вопросы и предложения, просим
+            вас заполнить форму ниже.
+        </div>
+        <form action="#" class="modal-form__form" id="feedback-form">
+            <label class="form-label _error">
+                <input type="text" placeholder="ФИО" name="name" class="form-input">
+                <span class="form-error">Ошибка</span>
+            </label>
+
+            <label class="form-label">
+                <input type="text" placeholder="Электронная почта" name="email" class="form-input">
+                <span class="form-error">Ошибка</span>
+            </label>
+
+            <label class="form-label">
+                <input type="text" placeholder="Тема обращения" name="theme" class="form-input">
+                <span class="form-error">Ошибка</span>
+            </label>
+
+            <label class="form-label">
+                <textarea name="message" class="form-textarea" placeholder="Ваше предложение"></textarea>
+                <span class="form-error">Ошибка</span>
+            </label>
+            <button class="btn_blue form-btn" type="submit">Отправить</button>
+        </form>
+    </div>
+</div>
+
+<!-- Уведомление после отправки формы -->
+<div class="notification-template" data-form-succses>
+    <div class="notification-template__title">Спасибо за вашу обратную связь!</div>
+    <div class="notification-template__descr">В ближайшее время с вами свяжется администратор сервиса. Хорошего дня!
+    </div>
+    <div class="notification-template__close">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22.3996 9.6001L9.59961 22.4001" stroke="white" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round" />
+            <path d="M9.59961 9.6001L22.3996 22.4001" stroke="white" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round" />
+        </svg>
+    </div>
+</div>
+<script src="./js/app.js"></script>
+
+</html>
