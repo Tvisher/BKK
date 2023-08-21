@@ -1,7 +1,26 @@
 <header class="header">
     <form role="search" method="get" id="searchform" action="" class="header__search">
-        <button class="search__btn" type="submit"></button>
-        <input type="text" value="" name="s" id="s" class="search__input" placeholder="Искать материалы" />
+        <input type="text" value="" name="s" id="s" class="search__input" placeholder="Искать материалы"
+            autocomplete="off" />
+        <button class="search__btn" type="submit">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g opacity="0.5">
+                    <path
+                        d="M14.6667 25.3333C20.5577 25.3333 25.3333 20.5577 25.3333 14.6667C25.3333 8.77563 20.5577 4 14.6667 4C8.77563 4 4 8.77563 4 14.6667C4 20.5577 8.77563 25.3333 14.6667 25.3333Z"
+                        stroke="#041327" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M27.9992 27.9992L22.1992 22.1992" stroke="#041327" stroke-width="3" stroke-linecap="square"
+                        stroke-linejoin="round" />
+                </g>
+            </svg>
+        </button>
+        <div class="search__form-res" id="form-history">
+            <div class="form-res__head">
+                <div class="form-res__text">Вы искали ранее</div>
+                <div class="form-res__remove" data-clear-history>Очистить историю</div>
+            </div>
+            <ul class="form-res__list" id="form-history-list">
+            </ul>
+        </div>
     </form>
     <div class="header__btns">
         <a href="javaccript:void(0)" class="header__btn _favorites">

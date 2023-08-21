@@ -191,3 +191,111 @@ tabLoad();
 window.addEventListener('popstate', () => {
     tabLoad();
 });
+
+
+
+
+const serchForm = document.querySelector('#searchform');
+const formHistoryList = document.querySelector('#form-history-list');
+const searchFild = document.querySelector('.search__input');
+const formHistoryBlock = document.querySelector('#form-history');
+const seachHistory = () => localStorage.getItem('seachHistory');
+
+searchFild.addEventListener('focus', () => {
+    if (seachHistory() && JSON.parse(seachHistory()).length > 0) {
+        formHistoryBlock.classList.add('show');
+        renderSearchHistory(seachHistory(), formHistoryList);
+    }
+});
+
+serchForm.addEventListener('submit', (e) => {
+    e.preventDefault()
+    const submitedInputValue = serchForm.querySelector('.search__input').value.trim();
+
+    let newSeachHistory = [];
+    console.log(submitedInputValue !== '');
+    if (submitedInputValue !== '') {
+        const searchHistoryItem = {
+            value: submitedInputValue,
+            id: `${submitedInputValue}-${Date.now()}`
+        };
+
+        if (seachHistory()) {
+            newSeachHistory = [...JSON.parse(seachHistory())];
+            if (newSeachHistory.length === 5) {
+                newSeachHistory.shift();
+                newSeachHistory.push(searchHistoryItem);
+            } else {
+                newSeachHistory.push(searchHistoryItem);
+            }
+        }
+        else {
+            newSeachHistory = [searchHistoryItem];
+        }
+        newSeachHistory = JSON.stringify(newSeachHistory);
+        localStorage.setItem('seachHistory', newSeachHistory);
+    }
+    serchForm.submit();
+});
+
+serchForm.addEventListener('click', e => {
+    const target = e.target;
+    if (target.closest('[data-clear-history]')) {
+        formHistoryBlock.classList.remove('show')
+        setTimeout(() => {
+            localStorage.removeItem('seachHistory');
+            formHistoryList.innerHTML = '';
+        }, 250);
+    }
+    if (target.closest('.form-res__remove-item')) {
+        const historyItemId = target.closest('[data-history-item-id]').getAttribute('data-history-item-id');
+        const filteredHistory = JSON.parse(seachHistory()).filter(item => item.id !== historyItemId);
+        localStorage.setItem('seachHistory', JSON.stringify(filteredHistory));
+        if (JSON.parse(seachHistory()).length < 1) {
+            formHistoryBlock.classList.remove('show')
+        } else {
+            renderSearchHistory(seachHistory(), formHistoryList);
+        }
+
+
+    }
+    if (target.closest('.form-res__value')) {
+        const searchedValue = target.closest('.form-res__value').innerHTML;
+        searchFild.value = searchedValue;
+        serchForm.submit();
+    }
+});
+
+
+function renderSearchHistory(dataArr, renderZone) {
+    const historyList = JSON.parse(dataArr).reverse();
+    const historyHtmlItems = historyList.map(item => {
+        const historyHtmlItem = `
+        <li class="form-res__item" data-history-item-id="${item.id}">
+        <div class="form-res__value">${item.value}</div>
+        <div class="form-res__remove-item">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g opacity="0.2">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M5.06066 2.93934C4.47487 2.35355 3.52513 2.35355 2.93934 2.93934C2.35355 3.52513 2.35355 4.47487 2.93934 5.06066L7.87868 10L2.93934 14.9393C2.35355 15.5251 2.35355 16.4749 2.93934 17.0607C3.52513 17.6464 4.47487 17.6464 5.06066 17.0607L10 12.1213L14.9393 17.0607C15.5251 17.6464 16.4749 17.6464 17.0607 17.0607C17.6464 16.4749 17.6464 15.5251 17.0607 14.9393L12.1213 10L17.0607 5.06066C17.6464 4.47487 17.6464 3.52513 17.0607 2.93934C16.4749 2.35355 15.5251 2.35355 14.9393 2.93934L10 7.87868L5.06066 2.93934Z"
+                        fill="#041327" />
+                </g>
+            </svg>
+        </div>
+    </li>`;
+        return historyHtmlItem;
+    }).join('');
+    renderZone.innerHTML = '';
+    renderZone.insertAdjacentHTML('afterbegin', historyHtmlItems);
+}
+
+document.addEventListener('click', e => {
+    const target = e.target;
+    const openedSearcHistory = document.querySelector('.search__form-res.show')
+
+    if (openedSearcHistory && !target.closest('.search__form-res.show') && !target.closest('.header__search')) {
+        openedSearcHistory.classList.remove('show')
+    }
+})
+
+
