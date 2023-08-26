@@ -4453,8 +4453,29 @@ section.search {
   padding-top: 100px;
 }
 
+.presintation__slider .swiper-wrapper::before {
+  opacity: 0;
+  content: "";
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  background-image: url(../img/loading.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100px;
+  transition: opacity 0.5s ease-in-out;
+}
+
 .presintation__slider.not-ready .slider-data {
   opacity: 0;
+}
+
+.presintation__slider.not-ready .swiper-wrapper::before {
+  opacity: 1;
 }
 
 .presintation__slider .swiper-button-prev,
@@ -4521,6 +4542,7 @@ section.search {
 
 .presintation__slider .slider-buttons .slider-download,
 .presintation__slider .slider-buttons .slider-modal {
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
