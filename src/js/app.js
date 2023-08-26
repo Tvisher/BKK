@@ -177,6 +177,7 @@ presintationSliderBlock.forEach(block => {
                     pdfjsLib.getDocument(pdfUrl).promise.then(pdfDoc => {
                         const numPages = pdfDoc.numPages;
                         const promises = [];
+                        const screenWidth = window.innerWidth;
                         for (let pageNum = 1; pageNum <= numPages; pageNum++) {
                             const swiperSlide = document.createElement('div');
                             swiperSlide.className = 'swiper-slide';
@@ -186,7 +187,7 @@ presintationSliderBlock.forEach(block => {
                             swiper.addSlide(pageNum, swiperSlide)
 
                             const promise = pdfDoc.getPage(pageNum).then(page => {
-                                const viewport = page.getViewport({ scale: 1.0 });
+                                const viewport = page.getViewport({ scale: screenWidth / page.getViewport({ scale: 1 }).width });
                                 const canvasWidth = viewport.width;
                                 const canvasHeight = viewport.height;
 
