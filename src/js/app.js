@@ -34,8 +34,14 @@ document.addEventListener('click', (e) => {
 
     // Открытие модального окна
     if (target.closest('[data-open-modal]')) {
+        const parentElement = target.closest('.presintation__slider-block');
         const modalId = target.closest('[data-open-modal]').dataset.openModal;
-        const currenModal = document.querySelector(`[data-modal="${modalId}"]`)
+        let currenModal;
+        if (parentElement) {
+            currenModal = parentElement.querySelector(`[data-modal="${modalId}"]`)
+        } else {
+            currenModal = document.querySelector(`[data-modal="${modalId}"]`)
+        }
         if (currenModal) currenModal.classList.add('show');
     }
 
@@ -142,26 +148,71 @@ if (players && players.length > 0) {
     });
 }
 
-//Слайдер для презентаций
-const swiper = new Swiper('.presintation__slider', {
-    slidesPerView: 1,
-    effect: 'fade',
-    fadeEffect: {
-        crossFade: true
-    },
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-    pagination: {
-        el: ".swiper-pagination",
-        type: "custom",
-        renderCustom: function (swiper, current, total) {
-            return 'Страница ' + current + ' из ' + total;
-        }
-    },
 
-});
+const presintationSliderBlock = document.querySelectorAll('.presintation__slider-block');
+presintationSliderBlock.forEach(block => {
+    const pdfUrl = block.dataset.pdfUrl;
+    const sliderElems = block.querySelectorAll('.presintation__slider');
+    sliderElems.forEach(sliderItem => {
+        //Слайдер для презентаций
+        const swiper = new Swiper(sliderItem, {
+            slidesPerView: 1,
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                type: "custom",
+                renderCustom: function (swiper, current, total) {
+                    return 'Страница ' + current + ' из ' + total;
+                },
+            },
+            on: {
+                beforeInit(swiper) {
+                    pdfjsLib.getDocument(pdfUrl).promise.then(pdfDoc => {
+                        const numPages = pdfDoc.numPages;
+                        const promises = [];
+                        for (let pageNum = 1; pageNum <= numPages; pageNum++) {
+                            const swiperSlide = document.createElement('div');
+                            swiperSlide.className = 'swiper-slide';
+                            const canvas = document.createElement('canvas');
+                            canvas.className = 'canvas-pdf';
+                            swiperSlide.appendChild(canvas);
+                            swiper.addSlide(pageNum, swiperSlide)
+
+                            const promise = pdfDoc.getPage(pageNum).then(page => {
+                                const viewport = page.getViewport({ scale: 1.0 });
+                                const canvasWidth = viewport.width;
+                                const canvasHeight = viewport.height;
+
+                                canvas.width = canvasWidth;
+                                canvas.height = canvasHeight;
+
+                                const context = canvas.getContext('2d');
+                                const renderContext = {
+                                    canvasContext: context,
+                                    viewport: viewport
+                                };
+                                return page.render(renderContext);
+                            });
+                            promises.push(promise);
+                        }
+                        Promise.all(promises).then(() => {
+                            swiper.el.classList.remove('not-ready')
+                        });
+                    });
+                }
+            }
+
+        });
+    })
+})
+
 
 
 //Логика для работы табов
@@ -200,7 +251,17 @@ const formHistoryList = document.querySelector('#form-history-list');
 const searchFild = document.querySelector('.search__input');
 const formHistoryBlock = document.querySelector('#form-history');
 const seachHistory = () => localStorage.getItem('seachHistory');
+const searchCleanBtn = document.querySelector('#search-clean');
+searchFild.addEventListener('input', (e) => {
+    const inputValue = e.target.value.trim();
+    inputValue.length > 0 ? searchCleanBtn.classList.add('show') : searchCleanBtn.classList.remove('show');
+});
 
+searchCleanBtn.addEventListener('click', (e) => {
+    searchFild.value = '';
+    formHistoryBlock.classList.remove('show');
+    searchCleanBtn.classList.remove('show');
+});
 searchFild.addEventListener('focus', () => {
     if (seachHistory() && JSON.parse(seachHistory()).length > 0) {
         formHistoryBlock.classList.add('show');

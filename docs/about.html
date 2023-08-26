@@ -17,6 +17,7 @@
     <script src="./js/select2.js"></script>
     <script src="./js/tippy-bundle.umd.min.js"></script>
     <script src="./js/plyr.js"></script>
+    <script src="./js/pdf.min.js"></script>
     <script src="./js/swiper.js"></script>
     <script> </script>
 </head>
@@ -206,6 +207,15 @@
                 </g>
             </svg>
         </button>
+        <div class="search__clean" id="search-clean">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g opacity="0.2">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M5.06066 2.93934C4.47487 2.35355 3.52513 2.35355 2.93934 2.93934C2.35355 3.52513 2.35355 4.47487 2.93934 5.06066L7.87868 10L2.93934 14.9393C2.35355 15.5251 2.35355 16.4749 2.93934 17.0607C3.52513 17.6464 4.47487 17.6464 5.06066 17.0607L10 12.1213L14.9393 17.0607C15.5251 17.6464 16.4749 17.6464 17.0607 17.0607C17.6464 16.4749 17.6464 15.5251 17.0607 14.9393L12.1213 10L17.0607 5.06066C17.6464 4.47487 17.6464 3.52513 17.0607 2.93934C16.4749 2.35355 15.5251 2.35355 14.9393 2.93934L10 7.87868L5.06066 2.93934Z"
+                        fill="#041327"></path>
+                </g>
+            </svg>
+        </div>
         <div class="search__form-res" id="form-history">
             <div class="form-res__head">
                 <div class="form-res__text">Вы искали ранее</div>
@@ -223,7 +233,6 @@
                         d="M3.29288 25.5751V4.22222C3.29288 2.99492 4.28781 2 5.51511 2H20.484C21.7113 2 22.7062 2.99492 22.7062 4.22222V25.5751C22.7062 27.4666 20.4938 28.4933 19.0493 27.2722L12.9996 22.1578L6.94977 27.2722C5.50532 28.4933 3.29288 27.4666 3.29288 25.5751Z"
                         fill="#004596" stroke="#004596" stroke-width="2.22222" stroke-linejoin="round" />
                 </svg>
-
             </div>
         </a>
         <div class="header__btn _notifications" id="notification-show">
@@ -412,6 +421,7 @@
         </div>
     </div>
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
 <script src="./js/app.js"></script>
 
 </html>
