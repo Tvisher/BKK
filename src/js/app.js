@@ -106,6 +106,7 @@ document.addEventListener('click', (e) => {
             allowHTML: true,
             content: tooltipContent,
             maxWidth: 450,
+            // trigger: 'click',
         });
     })
 })();
@@ -361,3 +362,26 @@ document.addEventListener('click', e => {
 })
 
 
+
+
+const imagesSliders = document.querySelectorAll('.images-slider');
+imagesSliders.forEach(imagesSlider => {
+    const nextElArrow = imagesSlider.querySelector('.swiper-button-next');
+    const prevElArrow = imagesSlider.querySelector('.swiper-button-prev');
+    const imagesSliderSwiper = new Swiper(imagesSlider, {
+        slidesPerView: 1,
+        effect: 'fade',
+        speed: 800,
+        fadeEffect: {
+            crossFade: true
+        },
+        navigation: {
+            nextEl: nextElArrow,
+            prevEl: prevElArrow,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+        },
+    });
+})

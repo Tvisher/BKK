@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Газпром нефть БКК</title>
+    <link rel="preload" href="./fonts/Inter-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Inter-Light.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Inter-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/Inter-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/select2.js"></script>
+    <script src="./js/tippy-bundle.umd.min.js"></script>
+    <script src="./js/plyr.js"></script>
+    <script src="./js/pdf.min.js"></script>
+    <script src="./js/swiper.js"></script>
+    <script> </script>
+</head>
+
+<body>
+<main>
+    <aside class="sidebar">
+    <div class="sidebar__content">
+        <a href="index.html" class="sidebar__logo">
+            <img src="img/main-logo.svg" alt="">
+        </a>
+
+        <ul class="sidebar__list">
+            <li class="sidebar-item blue">
+                <a href="javaccript:void(0)" class="menu-item__link">
+                    <span class="menu-item__marker">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M27 9H16.3337L12.865 6.4C12.5195 6.14087 12.0994 6.00054 11.6675 6H5C4.46957 6 3.96086 6.21071 3.58579 6.58579C3.21071 6.96086 3 7.46957 3 8V25C3 25.5304 3.21071 26.0391 3.58579 26.4142C3.96086 26.7893 4.46957 27 5 27H27.1112C27.612 26.9993 28.092 26.8001 28.4461 26.4461C28.8001 26.092 28.9993 25.612 29 25.1112V11C29 10.4696 28.7893 9.96086 28.4142 9.58579C28.0391 9.21071 27.5304 9 27 9Z"
+                                fill="#E95520" />
+                        </svg>
+                    </span>
+                    <span href="javaccript:void(0)" class="">Экосистема БКК</span>
+                </a>
+                <div class="sidebar-item__inner">
+                    <div class="sidebar-item__inner-content">
+                        <div class="inner__title">
+                            <span class="cat-ico">
+                                <svg width="28" height="29" viewBox="0 0 28 29" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M26.25 7.5V21.5C26.25 21.9641 26.0656 22.4092 25.7374 22.7374C25.4092 23.0656 24.9641 23.25 24.5 23.25H17.5C16.8038 23.25 16.1361 23.5266 15.6438 24.0188C15.1516 24.5111 14.875 25.1788 14.875 25.875C14.875 26.1071 14.7828 26.3296 14.6187 26.4937C14.4546 26.6578 14.2321 26.75 14 26.75C13.7679 26.75 13.5454 26.6578 13.3813 26.4937C13.2172 26.3296 13.125 26.1071 13.125 25.875C13.125 25.1788 12.8484 24.5111 12.3562 24.0188C11.8639 23.5266 11.1962 23.25 10.5 23.25H3.5C3.03587 23.25 2.59075 23.0656 2.26256 22.7374C1.93437 22.4092 1.75 21.9641 1.75 21.5V7.5C1.75 7.03587 1.93437 6.59075 2.26256 6.26256C2.59075 5.93437 3.03587 5.75 3.5 5.75H9.625C10.5533 5.75 11.4435 6.11875 12.0999 6.77513C12.7563 7.4315 13.125 8.32174 13.125 9.25V18.875C13.125 19.1071 13.2172 19.3296 13.3813 19.4937C13.5454 19.6578 13.7679 19.75 14 19.75C14.2321 19.75 14.4546 19.6578 14.6187 19.4937C14.7828 19.3296 14.875 19.1071 14.875 18.875V9.25C14.875 8.32174 15.2437 7.4315 15.9001 6.77513C16.5565 6.11875 17.4467 5.75 18.375 5.75H24.5C24.9641 5.75 25.4092 5.93437 25.7374 6.26256C26.0656 6.59075 26.25 7.03587 26.25 7.5Z"
+                                        fill="white" />
+                                </svg>
+                            </span>
+                            <span>Экосистема БКК</span>
+                        </div>
+                        <div class="inner__descr">
+                            Краткое и информативное описание раздела и материалов в нём для удобства навигирования
+                            по
+                            разделам при знакомстве с Большой книгой. Два-три предложения.
+                        </div>
+                        <div class="inner__links">
+                            <a href="javaccript:void(0)" class="inner__link">Оргструктура БКК</a>
+                            <a href="javaccript:void(0)" class="inner__link">
+                                Экосистема<br>
+                                корпоративных<br>
+                                коммуникаций
+                            </a>
+                            <a href="javaccript:void(0)" class="inner__link">
+                                Сотрудники прямого<br> подчинения ЗГД КК
+                            </a>
+                            <a href="javaccript:void(0)" class="inner__link">
+                                Департамент<br>
+                                информационной<br>
+                                политики
+                            </a>
+                            <a href="javaccript:void(0)" class="inner__link">
+                                Сотрудники прямого<br>
+                                подчинения ЗГД КК
+                            </a>
+                            <a href="javaccript:void(0)" class="inner__link">
+                                Управление<br>
+                                внутрикорпоративных<br>
+                                коммуникаций
+                            </a>
+                            <a href="javaccript:void(0)" class="inner__link">
+                                Программа социальных<br>
+                                инвестиций «Родные<br>
+                                города»
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="sidebar-item yellow">
+                <a href="javaccript:void(0)" class="menu-item__link">
+                    <span class="menu-item__marker">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M27 9H16.3337L12.865 6.4C12.5195 6.14087 12.0994 6.00054 11.6675 6H5C4.46957 6 3.96086 6.21071 3.58579 6.58579C3.21071 6.96086 3 7.46957 3 8V25C3 25.5304 3.21071 26.0391 3.58579 26.4142C3.96086 26.7893 4.46957 27 5 27H27.1112C27.612 26.9993 28.092 26.8001 28.4461 26.4461C28.8001 26.092 28.9993 25.612 29 25.1112V11C29 10.4696 28.7893 9.96086 28.4142 9.58579C28.0391 9.21071 27.5304 9 27 9Z"
+                                fill="#E95520" />
+                        </svg>
+                    </span>
+                    <span href="javaccript:void(0)" class="menu-item__name">Приоритетные<br> и циклические
+                        проекты</span>
+                </a>
+
+            </li>
+            <li class="sidebar-item light-blue">
+                <a href="javaccript:void(0)" class="menu-item__link">
+                    <span class="menu-item__marker">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M27 9H16.3337L12.865 6.4C12.5195 6.14087 12.0994 6.00054 11.6675 6H5C4.46957 6 3.96086 6.21071 3.58579 6.58579C3.21071 6.96086 3 7.46957 3 8V25C3 25.5304 3.21071 26.0391 3.58579 26.4142C3.96086 26.7893 4.46957 27 5 27H27.1112C27.612 26.9993 28.092 26.8001 28.4461 26.4461C28.8001 26.092 28.9993 25.612 29 25.1112V11C29 10.4696 28.7893 9.96086 28.4142 9.58579C28.0391 9.21071 27.5304 9 27 9Z"
+                                fill="#E95520" />
+                        </svg>
+                    </span>
+                    <span href="javaccript:void(0)" class="menu-item__name">Планирование,<br> управление и
+                        отчетность</span>
+                </a>
+            </li>
+            <li class="sidebar-item light-green">
+                <a href="javaccript:void(0)" class="menu-item__link">
+                    <span class="menu-item__marker">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M27 9H16.3337L12.865 6.4C12.5195 6.14087 12.0994 6.00054 11.6675 6H5C4.46957 6 3.96086 6.21071 3.58579 6.58579C3.21071 6.96086 3 7.46957 3 8V25C3 25.5304 3.21071 26.0391 3.58579 26.4142C3.96086 26.7893 4.46957 27 5 27H27.1112C27.612 26.9993 28.092 26.8001 28.4461 26.4461C28.8001 26.092 28.9993 25.612 29 25.1112V11C29 10.4696 28.7893 9.96086 28.4142 9.58579C28.0391 9.21071 27.5304 9 27 9Z"
+                                fill="#E95520" />
+                        </svg>
+                    </span>
+                    <span href="javaccript:void(0)" class="menu-item__name">Стратегии</span>
+                </a>
+            </li>
+            <li class="sidebar-item green">
+                <a href="javaccript:void(0)" class="menu-item__link">
+                    <span class="menu-item__marker">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M27 9H16.3337L12.865 6.4C12.5195 6.14087 12.0994 6.00054 11.6675 6H5C4.46957 6 3.96086 6.21071 3.58579 6.58579C3.21071 6.96086 3 7.46957 3 8V25C3 25.5304 3.21071 26.0391 3.58579 26.4142C3.96086 26.7893 4.46957 27 5 27H27.1112C27.612 26.9993 28.092 26.8001 28.4461 26.4461C28.8001 26.092 28.9993 25.612 29 25.1112V11C29 10.4696 28.7893 9.96086 28.4142 9.58579C28.0391 9.21071 27.5304 9 27 9Z"
+                                fill="#E95520" />
+                        </svg>
+                    </span>
+                    <span href="javaccript:void(0)" class="menu-item__name">Общие правила</span>
+                </a>
+            </li>
+        </ul>
+
+        <ul class="sidebar__list">
+            <li class="sidebar-item">
+                <a href="javaccript:void(0)" class="menu-item__link">
+                    <span class="menu-item__marker">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M27 9H16.3337L12.865 6.4C12.5195 6.14087 12.0994 6.00054 11.6675 6H5C4.46957 6 3.96086 6.21071 3.58579 6.58579C3.21071 6.96086 3 7.46957 3 8V25C3 25.5304 3.21071 26.0391 3.58579 26.4142C3.96086 26.7893 4.46957 27 5 27H27.1112C27.612 26.9993 28.092 26.8001 28.4461 26.4461C28.8001 26.092 28.9993 25.612 29 25.1112V11C29 10.4696 28.7893 9.96086 28.4142 9.58579C28.0391 9.21071 27.5304 9 27 9Z"
+                                fill="#E95520" />
+                        </svg>
+                    </span>
+                    <span class="menu-item__name">Регламенты</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a href="javaccript:void(0)" class="menu-item__link">
+                    <span class="menu-item__marker">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M27 9H16.3337L12.865 6.4C12.5195 6.14087 12.0994 6.00054 11.6675 6H5C4.46957 6 3.96086 6.21071 3.58579 6.58579C3.21071 6.96086 3 7.46957 3 8V25C3 25.5304 3.21071 26.0391 3.58579 26.4142C3.96086 26.7893 4.46957 27 5 27H27.1112C27.612 26.9993 28.092 26.8001 28.4461 26.4461C28.8001 26.092 28.9993 25.612 29 25.1112V11C29 10.4696 28.7893 9.96086 28.4142 9.58579C28.0391 9.21071 27.5304 9 27 9Z"
+                                fill="#E95520" />
+                        </svg>
+                    </span>
+                    <span class="menu-item__name">Шаблоны</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a href="javaccript:void(0)" class="menu-item__link">
+                    <span class="menu-item__marker">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M27 9H16.3337L12.865 6.4C12.5195 6.14087 12.0994 6.00054 11.6675 6H5C4.46957 6 3.96086 6.21071 3.58579 6.58579C3.21071 6.96086 3 7.46957 3 8V25C3 25.5304 3.21071 26.0391 3.58579 26.4142C3.96086 26.7893 4.46957 27 5 27H27.1112C27.612 26.9993 28.092 26.8001 28.4461 26.4461C28.8001 26.092 28.9993 25.612 29 25.1112V11C29 10.4696 28.7893 9.96086 28.4142 9.58579C28.0391 9.21071 27.5304 9 27 9Z"
+                                fill="#E95520" />
+                        </svg>
+                    </span>
+                    <span class="menu-item__name">Полезные инструменты</span>
+                </a>
+            </li>
+        </ul>
+        <div class="sidebar__otherts">
+            <a href="javaccript:void(0)" class="sidebar__other">О Большой книге</a>
+            <a href="javaccript:void(0)" class="sidebar__other">Корпоративный портал</a>
+            <a href="javaccript:void(0)" class="sidebar__other" data-open-modal="feedback">Вопросы и предложения</a>
+        </div>
+    </div>
+</aside>
+    <div class="content-zone">
+        <header class="header">
+    <form role="search" method="get" id="searchform" action="" class="header__search">
+        <input type="text" value="" name="s" id="s" class="search__input" placeholder="Искать материалы"
+            autocomplete="off" />
+        <button class="search__btn" type="submit">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g opacity="0.5">
+                    <path
+                        d="M14.6667 25.3333C20.5577 25.3333 25.3333 20.5577 25.3333 14.6667C25.3333 8.77563 20.5577 4 14.6667 4C8.77563 4 4 8.77563 4 14.6667C4 20.5577 8.77563 25.3333 14.6667 25.3333Z"
+                        stroke="#041327" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M27.9992 27.9992L22.1992 22.1992" stroke="#041327" stroke-width="3" stroke-linecap="square"
+                        stroke-linejoin="round" />
+                </g>
+            </svg>
+        </button>
+        <div class="search__clean" id="search-clean">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g opacity="0.2">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M5.06066 2.93934C4.47487 2.35355 3.52513 2.35355 2.93934 2.93934C2.35355 3.52513 2.35355 4.47487 2.93934 5.06066L7.87868 10L2.93934 14.9393C2.35355 15.5251 2.35355 16.4749 2.93934 17.0607C3.52513 17.6464 4.47487 17.6464 5.06066 17.0607L10 12.1213L14.9393 17.0607C15.5251 17.6464 16.4749 17.6464 17.0607 17.0607C17.6464 16.4749 17.6464 15.5251 17.0607 14.9393L12.1213 10L17.0607 5.06066C17.6464 4.47487 17.6464 3.52513 17.0607 2.93934C16.4749 2.35355 15.5251 2.35355 14.9393 2.93934L10 7.87868L5.06066 2.93934Z"
+                        fill="#041327"></path>
+                </g>
+            </svg>
+        </div>
+        <div class="search__form-res" id="form-history">
+            <div class="form-res__head">
+                <div class="form-res__text">Вы искали ранее</div>
+                <div class="form-res__remove" data-clear-history>Очистить историю</div>
+            </div>
+            <ul class="form-res__list" id="form-history-list">
+            </ul>
+        </div>
+    </form>
+    <div class="header__btns">
+        <a href="javaccript:void(0)" class="header__btn _favorites">
+            <div class="header__btn_ico">
+                <svg width="26" height="29" viewBox="0 0 26 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M3.29288 25.5751V4.22222C3.29288 2.99492 4.28781 2 5.51511 2H20.484C21.7113 2 22.7062 2.99492 22.7062 4.22222V25.5751C22.7062 27.4666 20.4938 28.4933 19.0493 27.2722L12.9996 22.1578L6.94977 27.2722C5.50532 28.4933 3.29288 27.4666 3.29288 25.5751Z"
+                        fill="#004596" stroke="#004596" stroke-width="2.22222" stroke-linejoin="round" />
+                </svg>
+            </div>
+        </a>
+        <div class="header__btn _notifications" id="notification-show">
+            <div class="header__btn_ico">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M30 13.334C30 10.6818 28.9464 8.13828 27.0711 6.26292C25.1957 4.38755 22.6522 3.33398 20 3.33398C17.3478 3.33398 14.8043 4.38755 12.9289 6.26292C11.0536 8.13828 10 10.6818 10 13.334C10 25.0007 5 28.334 5 28.334H35C35 28.334 30 25.0007 30 13.334Z"
+                        fill="#004596" stroke="#004596" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path
+                        d="M22.8839 34C22.5908 34.5051 22.1703 34.9244 21.6642 35.2159C21.1582 35.5073 20.5845 35.6608 20.0005 35.6608C19.4166 35.6608 18.8428 35.5073 18.3368 35.2159C17.8308 34.9244 17.4102 34.5051 17.1172 34"
+                        fill="#004596" />
+                    <path
+                        d="M22.8839 34C22.5908 34.5051 22.1703 34.9244 21.6642 35.2159C21.1582 35.5073 20.5845 35.6608 20.0005 35.6608C19.4166 35.6608 18.8428 35.5073 18.3368 35.2159C17.8308 34.9244 17.4102 34.5051 17.1172 34"
+                        stroke="#004596" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </div>
+            <div class="notifications__count">99</div>
+            <div class="notifications__dropped-list">
+                <a href="javaccript:void(0)" class="notification__item">
+                    <div class="notification-date">26 ноября 2022</div>
+                    <div class="notification-name">Добавлена новая версия шаблона «Паспорт проекта»</div>
+                </a>
+
+                <a href="javaccript:void(0)" class="notification__item">
+                    <div class="notification-date">26 ноября 2022</div>
+                    <div class="notification-name">Добавлена новая версия шаблона «Паспорт проекта»</div>
+                </a>
+                <a href="javaccript:void(0)" class="notification__item">
+                    <div class="notification-date">26 ноября 2022</div>
+                    <div class="notification-name">Рекомендуем к прочтению материал «Правила работы компании во время
+                        пандемии Covid 2020»</div>
+                </a>
+
+                <div class="notifications__footer">
+                    <a href="javaccript:void(0)" class="notifications__all">Все уведомления </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="article-container">
+            <div class="image-with-text">
+                <div class="image-with-text__wrapper">
+                    <img src="./img/article-img.jpg" alt="">
+                </div>
+                <div class="image-with-text__content">
+                    «Родные города» — программа социальных инвестиций
+                </div>
+            </div>
+
+            <p>
+                Социальные инвестиции – инструмент реализации миссии «Газпром нефти», обеспечивающий ее вклад в
+                формирование долгосрочной ценности для общества. Запрос на демонстрацию социальной позиции компании, ее
+                вклад в устойчивое развитие исходит сегодня от многих заинтересованных сторон:
+            </p>
+
+            <p>
+                <b>
+                    Социальные инвестиции – инструмент реализации миссии «Газпром нефти», обеспечивающий ее вклад в
+                    формирование долгосрочной ценности для общества. Запрос на демонстрацию социальной позиции компании,
+                    ее
+                    вклад в устойчивое развитие исходит сегодня от многих заинтересованных сторон:
+                </b>
+            </p>
+
+            <div class="fill-block">
+                <b>
+                    Мы улучшаем качество жизни в регионах нашей деятельности, создавая условия для развития и
+                    самореализации живущих там людей.
+                </b>
+            </div>
+
+            <div class="fill-block">
+                <span class="fill-block__title">Миссия программы</span>
+                <div class="fill-block__text">Мы улучшаем качество жизни в регионах нашей деятельности, создавая условия
+                    для развития и самореализации живущих там людей.</div>
+            </div>
+
+            <div class="fill-block">
+                <span class="fill-block__title">Цель программы</span>
+                <div class="fill-block__text">Обеспечивать позитивный социальный фон для бизнеса «Газпром нефти» через
+                    развитие человеческого капитала в регионах деятельности в партнерстве с заинтересованными сторонами.
+                </div>
+            </div>
+
+            <div class="fill-block">
+                <b>
+                    Задачи программы
+                </b>
+                <ol>
+                    <li><b>Деловая</b>: укреплять лояльность заинтересованных сторон в регионах для обеспечения
+                        непрерывных
+                        бизнес-процессов «Газпром нефти».</li>
+                    <li><b>Гуманитарная</b>: способствовать повышению качества жизни в регионах деятельности через
+                        поддержку
+                        инициатив местных сообществ и реализацию собственных проектов.</li>
+                    <li><b>Коммуникационная</b>: развивать целевой образ «социально-ответственный партнер в регионах
+                        деятельности» - в устойчивую репутацию.</li>
+                </ol>
+            </div>
+
+            <div class="fill-block">
+                <div class="quote-block">
+                    <div class="quote-block__ico"></div>
+                    <div class="quote-block__content">
+                        <div class="quote-block__text">
+                            «Цель программы — обеспечивать позитивный социальный фон для бизнеса компании через развитие
+                            человеческого капитала в регионах деятельности в партнерстве с заинтересованными сторонами».
+                        </div>
+                        <div class="quote-block__author">Алексей Воскресенский</div>
+                        <div class="quote-block__author-descr">Руководитель программы «Родные города»</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lines-block">
+                <div class="quote-block">
+                    <div class="quote-block__ico"></div>
+                    <div class="quote-block__content">
+                        <div class="quote-block__text">
+                            «Цель программы — обеспечивать позитивный социальный фон для бизнеса компании через развитие
+                            человеческого капитала в регионах деятельности в партнерстве с заинтересованными сторонами».
+                        </div>
+                        <div class="quote-block__author">Алексей Воскресенский</div>
+                        <div class="quote-block__author-descr">Руководитель программы «Родные города»</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fill-block">
+                <div class="quote-block">
+                    <div class="quote-block__image">
+                        <img src="./img/quote-img.jpg" alt="">
+                    </div>
+                    <div class="quote-block__content">
+                        <div class="quote-block__text">
+                            «Цель программы — обеспечивать позитивный социальный фон для бизнеса компании через развитие
+                            человеческого капитала в регионах деятельности в партнерстве с заинтересованными сторонами».
+                        </div>
+                        <div class="quote-block__author">Алексей Воскресенский</div>
+                        <div class="quote-block__author-descr">Руководитель программы «Родные города»</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lines-block">
+                <div class="quote-block">
+                    <div class="quote-block__image">
+                        <img src="./img/quote-img.jpg" alt="">
+                    </div>
+                    <div class="quote-block__content">
+                        <div class="quote-block__text">
+                            «Цель программы — обеспечивать позитивный социальный фон для бизнеса компании через развитие
+                            человеческого капитала в регионах деятельности в партнерстве с заинтересованными сторонами».
+                        </div>
+                        <div class="quote-block__author">Алексей Воскресенский</div>
+                        <div class="quote-block__author-descr">Руководитель программы «Родные города»</div>
+                    </div>
+                </div>
+            </div>
+
+            <ol>
+                <li>Интеллектуальный турнир для старшеклассников «Умножая таланты».</li>
+                <li>Программа поддержки математически одаренной молодежи «Математическая прогрессия».</li>
+                <li>Направление «Образование» грантового конкурса поддержки местных социальных инициатив.</li>
+                <li>Образовательный курс для партнеров программы «Родные города».</li>
+                <li>Направление «Образовательная среда» программы корпоративного волонтёрства.</li>
+                <li>Школа волонтера.</li>
+            </ol>
+
+            <ul>
+                <li>Интеллектуальный турнир для старшеклассников «Умножая таланты».</li>
+                <li>Программа поддержки математически одаренной молодежи «Математическая прогрессия».</li>
+                <li>Направление «Образование» грантового конкурса поддержки местных социальных инициатив.</li>
+                <li>Образовательный курс для партнеров программы «Родные города».</li>
+                <li>Направление «Образовательная среда» программы корпоративного волонтёрства.</li>
+                <li>Школа волонтера.</li>
+            </ul>
+
+            <ul class="icons-list">
+                <li class="icons-item">
+                    <div class="icons-item__ico">
+                        <img src="./img/list-ico.svg" alt="">
+                    </div>
+                    <div class="icons-item__text">
+                        Потребители продукции и компании-клиенты становятся более чувствительны к социальной позиции
+                        компании, которая при прочих равных влияет на их предпочтения и выбор.
+                    </div>
+                </li>
+            </ul>
+
+            <ul class="icons-list">
+                <li class="icons-item">
+                    <div class="icons-item__ico">
+                        <img src="./img/list-ico.svg" alt="">
+                    </div>
+                    <div class="icons-item__text">
+                        Потребители продукции и компании-клиенты становятся более чувствительны к социальной позиции
+                        компании, которая при прочих равных влияет на их предпочтения и выбор.
+                    </div>
+                </li>
+                <li class="icons-item">
+                    <div class="icons-item__ico">
+                        <img src="./img/list-ico.svg" alt="">
+                    </div>
+                    <div class="icons-item__text">
+                        Потребители продукции и компании-клиенты становятся более чувствительны к социальной позиции
+                        компании, которая при прочих равных влияет на их предпочтения и выбор.
+                    </div>
+                </li>
+            </ul>
+
+            <ul class="icons-list vertical two-columns">
+                <li class="icons-item">
+                    <div class="icons-item__title">Деловая</div>
+                    <div class="icons-item__text">
+                        Укреплять лояльность заинтересованных сторон в регионах для обеспечения непрерывных
+                        бизнес-процессов «Газпром нефти».
+                    </div>
+                </li>
+                <li class="icons-item">
+                    <div class="icons-item__title">Гуманитарная</div>
+                    <div class="icons-item__text">
+                        Способствовать повышению качества жизни в регионах деятельности через поддержку инициатив
+                        местных сообществ и реализацию собственных проектов.
+                    </div>
+                </li>
+            </ul>
+
+            <ul class="icons-list vertical three-columns">
+                <li class="icons-item">
+                    <div class="icons-item__title">Деловая</div>
+                    <div class="icons-item__text">
+                        Укреплять лояльность заинтересованных сторон в регионах для обеспечения непрерывных
+                        бизнес-процессов «Газпром нефти».
+                    </div>
+                </li>
+                <li class="icons-item">
+                    <div class="icons-item__title">Гуманитарная</div>
+                    <div class="icons-item__text">
+                        Способствовать повышению качества жизни в регионах деятельности через поддержку инициатив
+                        местных сообществ и реализацию собственных проектов.
+                    </div>
+                </li>
+
+                <li class="icons-item">
+                    <div class="icons-item__title">Коммуникационная</div>
+                    <div class="icons-item__text">
+                        Развивать целевой образ «социально-ответственный партнер в регионах деятельности» — в устойчивую
+                        репутацию.
+                    </div>
+                </li>
+            </ul>
+
+            <ul class="icons-list vertical four-columns">
+                <li class="icons-item">
+                    <div class="icons-item__title">Деловая</div>
+                    <div class="icons-item__text">
+                        Укреплять лояльность заинтересованных сторон в регионах для обеспечения непрерывных
+                        бизнес-процессов «Газпром нефти».
+                    </div>
+                </li>
+                <li class="icons-item">
+                    <div class="icons-item__title">Гуманитарная</div>
+                    <div class="icons-item__text">
+                        Способствовать повышению качества жизни в регионах деятельности через поддержку инициатив
+                        местных сообществ и реализацию собственных проектов.
+                    </div>
+                </li>
+
+                <li class="icons-item">
+                    <div class="icons-item__title">Коммуникационная</div>
+                    <div class="icons-item__text">
+                        Развивать целевой образ «социально-ответственный партнер в регионах деятельности» — в устойчивую
+                        репутацию.
+                    </div>
+                </li>
+                <li class="icons-item">
+                    <div class="icons-item__title">Коммуникационная</div>
+                    <div class="icons-item__text">
+                        Развивать целевой образ «социально-ответственный партнер в регионах деятельности» — в устойчивую
+                        репутацию.
+                    </div>
+                </li>
+            </ul>
+
+            <ul class="icons-list vertical two-columns">
+                <li class="icons-item">
+                    <div class="icons-item__ico">
+                        <img src="./img/list-ico.svg" alt="">
+                    </div>
+                    <div class="icons-item__title">Деловая</div>
+                    <div class="icons-item__text">
+                        Укреплять лояльность заинтересованных сторон в регионах для обеспечения непрерывных
+                        бизнес-процессов «Газпром нефти».
+                    </div>
+                </li>
+                <li class="icons-item">
+                    <div class="icons-item__ico">
+                        <img src="./img/list-ico.svg" alt="">
+                    </div>
+                    <div class="icons-item__title">Гуманитарная</div>
+                    <div class="icons-item__text">
+                        Способствовать повышению качества жизни в регионах деятельности через поддержку инициатив
+                        местных сообществ и реализацию собственных проектов.
+                    </div>
+                </li>
+            </ul>
+
+            <ul class="icons-list vertical three-columns">
+                <li class="icons-item">
+                    <div class="icons-item__ico">
+                        <img src="./img/list-ico.svg" alt="">
+                    </div>
+                    <div class="icons-item__title">Деловая</div>
+                    <div class="icons-item__text">
+                        Укреплять лояльность заинтересованных сторон в регионах для обеспечения непрерывных
+                        бизнес-процессов «Газпром нефти».
+                    </div>
+                </li>
+                <li class="icons-item">
+                    <div class="icons-item__ico">
+                        <img src="./img/list-ico.svg" alt="">
+                    </div>
+                    <div class="icons-item__title">Гуманитарная</div>
+                    <div class="icons-item__text">
+                        Способствовать повышению качества жизни в регионах деятельности через поддержку инициатив
+                        местных сообществ и реализацию собственных проектов.
+                    </div>
+                </li>
+                <li class="icons-item">
+                    <div class="icons-item__ico">
+                        <img src="./img/list-ico.svg" alt="">
+                    </div>
+                    <div class="icons-item__title">Гуманитарная</div>
+                    <div class="icons-item__text">
+                        Способствовать повышению качества жизни в регионах деятельности через поддержку инициатив
+                        местных сообществ и реализацию собственных проектов.
+                    </div>
+                </li>
+            </ul>
+
+            <ul class="icons-list vertical four-columns">
+                <li class="icons-item">
+                    <div class="icons-item__ico">
+                        <img src="./img/list-ico.svg" alt="">
+                    </div>
+                    <div class="icons-item__title">Деловая</div>
+                    <div class="icons-item__text">
+                        Укреплять лояльность заинтересованных сторон в регионах для обеспечения непрерывных
+                        бизнес-процессов «Газпром нефти».
+                    </div>
+                </li>
+                <li class="icons-item">
+                    <div class="icons-item__ico">
+                        <img src="./img/list-ico.svg" alt="">
+                    </div>
+                    <div class="icons-item__title">Гуманитарная</div>
+                    <div class="icons-item__text">
+                        Способствовать повышению качества жизни в регионах деятельности через поддержку инициатив
+                        местных сообществ и реализацию собственных проектов.
+                    </div>
+                </li>
+                <li class="icons-item">
+                    <div class="icons-item__ico">
+                        <img src="./img/list-ico.svg" alt="">
+                    </div>
+                    <div class="icons-item__title">Деловая</div>
+                    <div class="icons-item__text">
+                        Укреплять лояльность заинтересованных сторон в регионах для обеспечения непрерывных
+                        бизнес-процессов «Газпром нефти».
+                    </div>
+                </li>
+                <li class="icons-item">
+                    <div class="icons-item__ico">
+                        <img src="./img/list-ico.svg" alt="">
+                    </div>
+                    <div class="icons-item__title">Гуманитарная</div>
+                    <div class="icons-item__text">
+                        Способствовать повышению качества жизни в регионах деятельности через поддержку инициатив
+                        местных сообществ и реализацию собственных проектов.
+                    </div>
+                </li>
+            </ul>
+
+            <div class="fill-cards two-columns">
+                <div class="fill-card">
+                    <div class="fill-card__wrapper">
+                        <div class="fill-card__tile">Индекс лояльности</div>
+                        <div class="fill-card__large-text">0,65</div>
+                        <div class="fill-card__descr">Обеспечить уровень информированности сотрудников Группы ГПН не
+                            ниже 80% до 2025 года.</div>
+                    </div>
+                </div>
+
+                <div class="fill-card">
+                    <div class="fill-card__wrapper">
+                        <div class="fill-card__tile">Информированность сотрудников</div>
+                        <div class="fill-card__large-text">80%</div>
+                        <div class="fill-card__descr">Обеспечить уровень информированности сотрудников Группы ГПН не
+                            ниже 80% до 2025 года.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fill-cards three-columns">
+                <div class="fill-card">
+                    <div class="fill-card__wrapper">
+                        <div class="fill-card__tile">Индекс лояльности</div>
+                        <div class="fill-card__large-text">0,65</div>
+                        <div class="fill-card__descr">Обеспечить уровень информированности сотрудников Группы ГПН не
+                            ниже 80% до 2025 года.</div>
+                    </div>
+                </div>
+
+                <div class="fill-card">
+                    <div class="fill-card__wrapper">
+                        <div class="fill-card__tile">Информированность сотрудников</div>
+                        <div class="fill-card__large-text">80%</div>
+                        <div class="fill-card__descr">Обеспечить уровень информированности сотрудников Группы ГПН не
+                            ниже 80% до 2025 года.</div>
+                    </div>
+                </div>
+                <div class="fill-card">
+                    <div class="fill-card__wrapper">
+                        <div class="fill-card__tile">Ключевых показателей</div>
+                        <div class="fill-card__large-text">7</div>
+                        <div class="fill-card__descr">Обеспечить стабильный уровень репутации бренда «Газпром нефть» по
+                            7 ключевым показателям до 2030 года.</div>
+                    </div>
+                </div>
+            </div>
+
+            <img src="img/tab-img.jpg" alt="">
+
+            <div class="fill-block">
+                <b>
+                    Мы улучшаем качество жизни в регионах нашей деятельности, создавая условия для развития и
+                    самореализации живущих там людей.
+                </b>
+            </div>
+
+            <div class="aspect-ratio-image">
+                <div class="aspect-ratio-image__container">
+                    <img src="img/tab-img.jpg" alt="">
+                </div>
+            </div>
+            <div class="float-image float-left ">
+                <div class="float-image__wrapper">
+                    <img src="./img/article-img.jpg" alt="">
+                </div>
+            </div>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet a quisquam similique eligendi delectus,
+                cumque nulla recusandae veritatis nam magnam architecto provident possimus eos suscipit aspernatur,
+                tenetur quibusdam quos in, pariatur ratione sapiente laborum necessitatibus totam. Cumque dolor vero cum
+                harum alias est. Temporibus vitae, labore quis at eos architecto, hic veritatis cumque reprehenderit qui
+                eum nisi! Ut mollitia error velit, culpa magnam perspiciatis aliquam vitae sed est excepturi temporibus
+                voluptatum, facilis, voluptate cupiditate ratione ullam molestias iste eaque architecto vel.
+                Necessitatibus totam ut neque ipsam facere officia vitae tempore amet aut aspernatur laboriosam cum
+                ipsum velit, veritatis expedita. Quam.
+                cumque nulla recusandae veritatis nam magnam architecto provident possimus eos suscipit aspernatur,
+                tenetur quibusdam quos in, pariatur ratione sapiente laborum necessitatibus totam. Cumque dolor vero cum
+
+            </p>
+            <div class="float-image float-right ">
+                <div class="float-image__wrapper">
+                    <img src="./img/article-img.jpg" alt="">
+                </div>
+            </div>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet a quisquam similique eligendi delectus,
+                cumque nulla recusandae veritatis nam magnam architecto provident possimus eos suscipit aspernatur,
+                tenetur quibusdam quos in, pariatur ratione sapiente laborum necessitatibus totam. Cumque dolor vero cum
+                harum alias est. Temporibus vitae, labore quis at eos architecto, hic veritatis cumque reprehenderit qui
+                eum nisi! Ut mollitia error velit, culpa magnam perspiciatis aliquam vitae sed est excepturi temporibus
+                voluptatum, facilis, voluptate cupiditate ratione ullam molestias iste eaque architecto vel.
+                Necessitatibus totam ut neque ipsam facere officia vitae tempore amet aut aspernatur laboriosam cum
+                ipsum velit, veritatis expedita. Quam.
+                cumque nulla recusandae veritatis nam magnam architecto provident possimus eos suscipit aspernatur,
+                tenetur quibusdam quos in, pariatur ratione sapiente laborum necessitatibus totam. Cumque dolor vero cum
+                harum alias est. Temporibus vitae, labore quis at eos architecto, hic veritatis cumque reprehenderit qui
+                eum nisi! Ut mollitia error velit, culpa magnam perspiciatis aliquam vitae sed est excepturi temporibus
+                voluptatum, facilis, voluptate cupiditate ratione ullam molestias iste eaque architecto vel.
+                Necessitatibus totam ut neque ipsam facere officia vitae tempore amet aut aspernatur laboriosam cum
+                ipsum velit, veritatis expedita. Quam.
+            </p>
+
+            <div class="images-slider swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide images-slide">
+                        <div class="images-slide__container">
+                            <img src="img/tab-img.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide images-slide">
+                        <div class="images-slide__container">
+                            <img src="img/tab-img.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide images-slide">
+                        <div class="images-slide__container">
+                            <img src="img/tab-img.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide images-slide">
+                        <div class="images-slide__container">
+                            <img src="img/tab-img.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.4004 18L8.40039 12L14.4004 6" stroke="#004596" stroke-width="4"
+                            stroke-linecap="round" />
+                    </svg>
+
+                </div>
+                <div class="swiper-button-next">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.59961 6L15.5996 12L9.59961 18" stroke="#004596" stroke-width="4"
+                            stroke-linecap="round" />
+                    </svg>
+
+                </div>
+            </div>
+
+            <div class="fill-block">
+                <b>
+                    Мы улучшаем качество жизни в регионах нашей деятельности, создавая условия для развития и
+                    самореализации живущих там людей.
+                </b>
+            </div>
+
+            <div class="article__doc">
+                <a href="javaccript:void(0)" class="article__doc-wrapper">
+                    <div class="doc__ico">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M7.5 18.75H32.5C32.8315 18.75 33.1495 18.6183 33.3839 18.3839C33.6183 18.1495 33.75 17.8315 33.75 17.5V13.75C33.7501 13.5858 33.7179 13.4232 33.6552 13.2714C33.5924 13.1197 33.5004 12.9818 33.3844 12.8656L24.6344 4.11563C24.5182 3.99958 24.3803 3.90756 24.2286 3.84483C24.0768 3.78209 23.9142 3.74987 23.75 3.75H8.75C8.08696 3.75 7.45107 4.01339 6.98223 4.48223C6.51339 4.95107 6.25 5.58696 6.25 6.25V17.5C6.25 17.8315 6.3817 18.1495 6.61612 18.3839C6.85054 18.6183 7.16848 18.75 7.5 18.75ZM23.75 6.875L30.625 13.75H23.75V6.875ZM35 23.75C35 24.0815 34.8683 24.3995 34.6339 24.6339C34.3995 24.8683 34.0815 25 33.75 25H30V27.5H32.5C32.8315 27.5 33.1495 27.6317 33.3839 27.8661C33.6183 28.1005 33.75 28.4185 33.75 28.75C33.75 29.0815 33.6183 29.3995 33.3839 29.6339C33.1495 29.8683 32.8315 30 32.5 30H30V32.5C30 32.8315 29.8683 33.1495 29.6339 33.3839C29.3995 33.6183 29.0815 33.75 28.75 33.75C28.4185 33.75 28.1005 33.6183 27.8661 33.3839C27.6317 33.1495 27.5 32.8315 27.5 32.5V23.75C27.5 23.4185 27.6317 23.1005 27.8661 22.8661C28.1005 22.6317 28.4185 22.5 28.75 22.5H33.75C34.0815 22.5 34.3995 22.6317 34.6339 22.8661C34.8683 23.1005 35 23.4185 35 23.75ZM10 22.5H7.5C7.16848 22.5 6.85054 22.6317 6.61612 22.8661C6.3817 23.1005 6.25 23.4185 6.25 23.75V32.5C6.25 32.8315 6.3817 33.1495 6.61612 33.3839C6.85054 33.6183 7.16848 33.75 7.5 33.75C7.83152 33.75 8.14946 33.6183 8.38388 33.3839C8.6183 33.1495 8.75 32.8315 8.75 32.5V31.25H10C11.1603 31.25 12.2731 30.7891 13.0936 29.9686C13.9141 29.1481 14.375 28.0353 14.375 26.875C14.375 25.7147 13.9141 24.6019 13.0936 23.7814C12.2731 22.9609 11.1603 22.5 10 22.5ZM10 28.75H8.75V25H10C10.4973 25 10.9742 25.1975 11.3258 25.5492C11.6775 25.9008 11.875 26.3777 11.875 26.875C11.875 27.3723 11.6775 27.8492 11.3258 28.2008C10.9742 28.5525 10.4973 28.75 10 28.75ZM20 22.5H17.5C17.1685 22.5 16.8505 22.6317 16.6161 22.8661C16.3817 23.1005 16.25 23.4185 16.25 23.75V32.5C16.25 32.8315 16.3817 33.1495 16.6161 33.3839C16.8505 33.6183 17.1685 33.75 17.5 33.75H20C21.4918 33.75 22.9226 33.1574 23.9775 32.1025C25.0324 31.0476 25.625 29.6168 25.625 28.125C25.625 26.6332 25.0324 25.2024 23.9775 24.1475C22.9226 23.0926 21.4918 22.5 20 22.5ZM20 31.25H18.75V25H20C20.8288 25 21.6237 25.3292 22.2097 25.9153C22.7958 26.5013 23.125 27.2962 23.125 28.125C23.125 28.9538 22.7958 29.7487 22.2097 30.3347C21.6237 30.9208 20.8288 31.25 20 31.25Z"
+                                fill="#004596"></path>
+                        </svg>
+                    </div>
+                    <div class="doc__data">
+                        <div class="data-name">Политика корпоративных
+                            коммуникаций
+                            (15 ноября 2022)</div>
+                        <div class="data-descr">13 страниц, 340 кб</div>
+                    </div>
+                </a>
+                <a href="javaccript:void(0)" download="" class="doc__btn btn_blue">Скачать</a>
+            </div>
+            <div class="article__doc">
+                <a href="javaccript:void(0)" class="article__doc-wrapper">
+                    <div class="doc__ico">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M7.5 18.75H32.5C32.8315 18.75 33.1495 18.6183 33.3839 18.3839C33.6183 18.1495 33.75 17.8315 33.75 17.5V13.75C33.7501 13.5858 33.7179 13.4232 33.6552 13.2714C33.5924 13.1197 33.5004 12.9818 33.3844 12.8656L24.6344 4.11563C24.5182 3.99958 24.3803 3.90756 24.2286 3.84483C24.0768 3.78209 23.9142 3.74987 23.75 3.75H8.75C8.08696 3.75 7.45107 4.01339 6.98223 4.48223C6.51339 4.95107 6.25 5.58696 6.25 6.25V17.5C6.25 17.8315 6.3817 18.1495 6.61612 18.3839C6.85054 18.6183 7.16848 18.75 7.5 18.75ZM23.75 6.875L30.625 13.75H23.75V6.875ZM35 23.75C35 24.0815 34.8683 24.3995 34.6339 24.6339C34.3995 24.8683 34.0815 25 33.75 25H30V27.5H32.5C32.8315 27.5 33.1495 27.6317 33.3839 27.8661C33.6183 28.1005 33.75 28.4185 33.75 28.75C33.75 29.0815 33.6183 29.3995 33.3839 29.6339C33.1495 29.8683 32.8315 30 32.5 30H30V32.5C30 32.8315 29.8683 33.1495 29.6339 33.3839C29.3995 33.6183 29.0815 33.75 28.75 33.75C28.4185 33.75 28.1005 33.6183 27.8661 33.3839C27.6317 33.1495 27.5 32.8315 27.5 32.5V23.75C27.5 23.4185 27.6317 23.1005 27.8661 22.8661C28.1005 22.6317 28.4185 22.5 28.75 22.5H33.75C34.0815 22.5 34.3995 22.6317 34.6339 22.8661C34.8683 23.1005 35 23.4185 35 23.75ZM10 22.5H7.5C7.16848 22.5 6.85054 22.6317 6.61612 22.8661C6.3817 23.1005 6.25 23.4185 6.25 23.75V32.5C6.25 32.8315 6.3817 33.1495 6.61612 33.3839C6.85054 33.6183 7.16848 33.75 7.5 33.75C7.83152 33.75 8.14946 33.6183 8.38388 33.3839C8.6183 33.1495 8.75 32.8315 8.75 32.5V31.25H10C11.1603 31.25 12.2731 30.7891 13.0936 29.9686C13.9141 29.1481 14.375 28.0353 14.375 26.875C14.375 25.7147 13.9141 24.6019 13.0936 23.7814C12.2731 22.9609 11.1603 22.5 10 22.5ZM10 28.75H8.75V25H10C10.4973 25 10.9742 25.1975 11.3258 25.5492C11.6775 25.9008 11.875 26.3777 11.875 26.875C11.875 27.3723 11.6775 27.8492 11.3258 28.2008C10.9742 28.5525 10.4973 28.75 10 28.75ZM20 22.5H17.5C17.1685 22.5 16.8505 22.6317 16.6161 22.8661C16.3817 23.1005 16.25 23.4185 16.25 23.75V32.5C16.25 32.8315 16.3817 33.1495 16.6161 33.3839C16.8505 33.6183 17.1685 33.75 17.5 33.75H20C21.4918 33.75 22.9226 33.1574 23.9775 32.1025C25.0324 31.0476 25.625 29.6168 25.625 28.125C25.625 26.6332 25.0324 25.2024 23.9775 24.1475C22.9226 23.0926 21.4918 22.5 20 22.5ZM20 31.25H18.75V25H20C20.8288 25 21.6237 25.3292 22.2097 25.9153C22.7958 26.5013 23.125 27.2962 23.125 28.125C23.125 28.9538 22.7958 29.7487 22.2097 30.3347C21.6237 30.9208 20.8288 31.25 20 31.25Z"
+                                fill="#004596"></path>
+                        </svg>
+                    </div>
+                    <div class="doc__data">
+                        <div class="data-name">Политика корпоративных
+                            коммуникаций
+                            (15 ноября 2022)</div>
+                        <div class="data-descr">13 страниц, 340 кб</div>
+                    </div>
+                </a>
+                <a href="javaccript:void(0)" download="" class="doc__btn btn_blue">Скачать</a>
+            </div>
+
+
+            <div class="article__doc lines-doc">
+                <a href="javaccript:void(0)" target="_blank" class="article__doc-wrapper">
+                    <div class="doc__data">
+                        <div class="data-name">Визуальное управление
+                            (15 ноября 2022)</div>
+                        <div class="data-descr">3 карточки</div>
+                    </div>
+                </a>
+                <a href="javaccript:void(0)" target="_blank" class="doc__btn btn_blue">Смотреть</a>
+            </div>
+
+            <div class="article__doc lines-doc">
+                <a href="javaccript:void(0)" target="_blank" class="article__doc-wrapper">
+                    <div class="doc__data">
+                        <div class="data-name">Визуальное управление
+                            (15 ноября 2022)</div>
+                        <div class="data-descr">3 карточки</div>
+                    </div>
+                </a>
+                <a href="javaccript:void(0)" target="_blank" class="doc__btn btn_blue">Смотреть</a>
+            </div>
+
+            <div class="article__doc lines-doc">
+                <a href="javaccript:void(0)" target="_blank" class="article__doc-wrapper">
+                    <div class="doc__data">
+                        <div class="data-name">Визуальное управление
+                            (15 ноября 2022)</div>
+                        <div class="data-descr">3 карточки</div>
+                    </div>
+                </a>
+                <a href="javaccript:void(0)" target="_blank" class="doc__btn btn_blue">Смотреть</a>
+            </div>
+
+            <div class="selection-block">
+                <div class="selection-block__head">
+                    <div class="selection-block__ico">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M23.5 10.5C23.1627 10.4993 22.8267 10.5413 22.5 10.625V7.49996C22.5006 6.85364 22.3445 6.2168 22.0452 5.64397C21.7458 5.07114 21.3121 4.57937 20.7812 4.21077C20.2503 3.84216 19.638 3.6077 18.9967 3.52745C18.3553 3.4472 17.7041 3.52355 17.0988 3.74996C16.7035 2.9353 16.0435 2.27886 15.2267 1.88798C14.4099 1.4971 13.4847 1.39492 12.6023 1.59813C11.7199 1.80135 10.9326 2.29794 10.369 3.00671C9.8055 3.71547 9.49913 4.59447 9.5 5.49996V5.62496C8.90875 5.4723 8.2904 5.45704 7.69233 5.58034C7.09427 5.70363 6.53237 5.96222 6.04971 6.33629C5.56705 6.71035 5.17644 7.18995 4.90782 7.73833C4.6392 8.28672 4.49969 8.88932 4.5 9.49996V19C4.5 22.05 5.7116 24.975 7.86827 27.1317C10.0249 29.2884 12.95 30.5 16 30.5C19.05 30.5 21.9751 29.2884 24.1317 27.1317C26.2884 24.975 27.5 22.05 27.5 19V14.5C27.5 13.4391 27.0786 12.4217 26.3284 11.6715C25.5783 10.9214 24.5609 10.5 23.5 10.5ZM24.5 19C24.5 21.2543 23.6045 23.4163 22.0104 25.0104C20.4163 26.6044 18.2543 27.5 16 27.5C13.7457 27.5 11.5837 26.6044 9.98959 25.0104C8.39553 23.4163 7.5 21.2543 7.5 19V9.49996C7.5 9.23475 7.60536 8.98039 7.79289 8.79286C7.98043 8.60532 8.23478 8.49996 8.5 8.49996C8.76522 8.49996 9.01957 8.60532 9.20711 8.79286C9.39464 8.98039 9.5 9.23475 9.5 9.49996V15C9.5 15.3978 9.65804 15.7793 9.93934 16.0606C10.2206 16.3419 10.6022 16.5 11 16.5C11.3978 16.5 11.7794 16.3419 12.0607 16.0606C12.342 15.7793 12.5 15.3978 12.5 15V5.49996C12.5 5.23475 12.6054 4.98039 12.7929 4.79286C12.9804 4.60532 13.2348 4.49996 13.5 4.49996C13.7652 4.49996 14.0196 4.60532 14.2071 4.79286C14.3946 4.98039 14.5 5.23475 14.5 5.49996V14C14.5 14.3978 14.658 14.7793 14.9393 15.0606C15.2206 15.3419 15.6022 15.5 16 15.5C16.3978 15.5 16.7794 15.3419 17.0607 15.0606C17.342 14.7793 17.5 14.3978 17.5 14V7.49996C17.5 7.23475 17.6054 6.98039 17.7929 6.79286C17.9804 6.60532 18.2348 6.49996 18.5 6.49996C18.7652 6.49996 19.0196 6.60532 19.2071 6.79286C19.3946 6.98039 19.5 7.23475 19.5 7.49996V15.675C18.0773 16.0144 16.8103 16.823 15.9033 17.9705C14.9962 19.1179 14.5019 20.5373 14.5 22C14.5 22.3978 14.658 22.7793 14.9393 23.0606C15.2206 23.3419 15.6022 23.5 16 23.5C16.3978 23.5 16.7794 23.3419 17.0607 23.0606C17.342 22.7793 17.5 22.3978 17.5 22C17.5 21.0717 17.8687 20.1815 18.5251 19.5251C19.1815 18.8687 20.0717 18.5 21 18.5C21.3978 18.5 21.7794 18.3419 22.0607 18.0606C22.342 17.7793 22.5 17.3978 22.5 17V14.5C22.5 14.2347 22.6054 13.9804 22.7929 13.7929C22.9804 13.6053 23.2348 13.5 23.5 13.5C23.7652 13.5 24.0196 13.6053 24.2071 13.7929C24.3946 13.9804 24.5 14.2347 24.5 14.5V19Z"
+                                fill="#E65907" />
+                        </svg>
+                    </div>
+                    <div class="selection-block__title">Данная информация находится под NDA</div>
+                </div>
+                <div class="selection-block__text">«Цель программы — обеспечивать позитивный социальный фон для бизнеса
+                    компании через развитие человеческого капитала в регионах деятельности в партнерстве с
+                    заинтересованными сторонами».</div>
+            </div>
+
+            <p>
+                Циклический, административный бизнес-процесс. Объектами планирования и отчетности является операционная
+                деятельность подразделений блока, включая <span class="gray-underline">ДРР</span>, <span
+                    class="gray-underline">ДИП</span>, <span class="gray-underline">УВК</span>,
+                <span class="gray-underline">УМК</span>, Фонд «Родные города» и отдельных <span class="gray-underline"
+                    data-toltip="" data-toltip-text="Cотрудники прямого подчинения">СПП</span>.
+                Операционная деятельность подразделений разделена по <a href="javaccript:void(0)" data-toltip=""
+                    data-toltip-title="Экосистема БКК" data-toltip-ico="img/folders/blue-folder.svg"
+                    data-toltip-text="Краткое и информативное описание раздела и материалов в нём для удобства навигирования по разделам при  знакомстве с Большой книгой. Два-три предложения.">функциональным
+                    направлениям</a>. Подготовка планов и
+                отчетов вписана в цикличные ежегодные периоды на уровне компании. Принят единый порядок, формы, сроки и
+                ответственные за формирование управленческой и административной отчетности внутри блока. Ответственным
+                лицом, координирующим действия подразделений и руководителей, является назначенный советник ЗГД КК.
+            </p>
+        </div>
+    </div>
+</main>
+
+
+раздела</a>
+<footer> </footer>
+</body>
+<div class="modal-form modal-template" data-modal="feedback">
+    <div class="modal-form__content modal-template__inner">
+        <div class="modal-form__close" data-close-modal>
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="48" height="48" rx="24" fill="white" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M19.0607 16.9393C18.4749 16.3536 17.5251 16.3536 16.9393 16.9393C16.3536 17.5251 16.3536 18.4749 16.9393 19.0607L21.8787 24L16.9393 28.9393C16.3536 29.5251 16.3536 30.4749 16.9393 31.0607C17.5251 31.6464 18.4749 31.6464 19.0607 31.0607L24 26.1213L28.9393 31.0607C29.5251 31.6464 30.4749 31.6464 31.0607 31.0607C31.6464 30.4749 31.6464 29.5251 31.0607 28.9393L26.1213 24L31.0607 19.0607C31.6464 18.4749 31.6464 17.5251 31.0607 16.9393C30.4749 16.3536 29.5251 16.3536 28.9393 16.9393L24 21.8787L19.0607 16.9393Z"
+                    fill="#004596" />
+            </svg>
+        </div>
+        <div class="modal-form__title">
+            Обратная связь<br> по «Большой книге БКК»
+        </div>
+        <div class="modal-form__descr">
+            Нам очень важно знать ваше мнение о сервисе и его материалах. Если у вас есть вопросы и предложения, просим
+            вас заполнить форму ниже.
+        </div>
+        <form action="#" class="modal-form__form" id="feedback-form">
+            <label class="form-label _error">
+                <input type="text" placeholder="ФИО" name="name" class="form-input">
+                <span class="form-error">Ошибка</span>
+            </label>
+
+            <label class="form-label">
+                <input type="text" placeholder="Электронная почта" name="email" class="form-input">
+                <span class="form-error">Ошибка</span>
+            </label>
+
+            <label class="form-label">
+                <input type="text" placeholder="Тема обращения" name="theme" class="form-input">
+                <span class="form-error">Ошибка</span>
+            </label>
+
+            <label class="form-label">
+                <textarea name="message" class="form-textarea" placeholder="Ваше предложение"></textarea>
+                <span class="form-error">Ошибка</span>
+            </label>
+            <button class="btn_blue form-btn" type="submit">Отправить</button>
+        </form>
+    </div>
+</div>
+
+<!-- Уведомление после отправки формы -->
+<div class="notification-template" data-form-succses>
+    <div class="notification-template__title">Спасибо за вашу обратную связь!</div>
+    <div class="notification-template__descr">В ближайшее время с вами свяжется администратор сервиса. Хорошего дня!
+    </div>
+    <div class="notification-template__close">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22.3996 9.6001L9.59961 22.4001" stroke="white" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round" />
+            <path d="M9.59961 9.6001L22.3996 22.4001" stroke="white" stroke-width="3" stroke-linecap="round"
+                stroke-linejoin="round" />
+        </svg>
+    </div>
+</div>
+
+<!-- Уведомление с сервера -->
+<div class="notifications" id="notifications">
+    <div class="notification-template new-notification show">
+        <div class="notification-template_ico">
+            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M22.25 10.168C22.25 8.24515 21.4862 6.40108 20.1265 5.04144C18.7669 3.68181 16.9228 2.91797 15 2.91797C13.0772 2.91797 11.2331 3.68181 9.87348 5.04144C8.51384 6.40108 7.75 8.24515 7.75 10.168C7.75 18.6263 4.125 21.043 4.125 21.043H25.875C25.875 21.043 22.25 18.6263 22.25 10.168Z"
+                    fill="#004596" stroke="#004596" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path
+                    d="M17.091 25.1484C16.8786 25.5147 16.5736 25.8186 16.2068 26.03C15.8399 26.2413 15.4239 26.3525 15.0006 26.3525C14.5772 26.3525 14.1613 26.2413 13.7944 26.03C13.4275 25.8186 13.1226 25.5147 12.9102 25.1484"
+                    fill="#004596" />
+                <path
+                    d="M17.091 25.1484C16.8786 25.5147 16.5736 25.8186 16.2068 26.03C15.8399 26.2413 15.4239 26.3525 15.0006 26.3525C14.5772 26.3525 14.1613 26.2413 13.7944 26.03C13.4275 25.8186 13.1226 25.5147 12.9102 25.1484"
+                    stroke="#004596" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </div>
+        <div class="notification-template__descr">Добавлена новая версия документа «Паспорт проекта».</div>
+        <a href="javaccript:void(0)" class="btn_blue">Посмотреть</a>
+        <div class="notification-template__close">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M22.3996 9.6001L9.59961 22.4001" stroke="white" stroke-width="3" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                <path d="M9.59961 9.6001L22.3996 22.4001" stroke="white" stroke-width="3" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+        </div>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+<script src="./js/app.js"></script>
+
+</html>
