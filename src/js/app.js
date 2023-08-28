@@ -385,3 +385,19 @@ imagesSliders.forEach(imagesSlider => {
         },
     });
 })
+
+
+const articleTabsTemplate = document.querySelectorAll('.article__tabs');
+articleTabsTemplate.forEach(item => {
+    const nextElArrow = item.closest('.article__tabs-template').querySelector('.swiper-button-next');
+    const prevElArrow = item.closest('.article__tabs-template').querySelector('.swiper-button-prev');
+    const sliderElem = new Swiper(item, {
+        slidesPerView: 'auto',
+        speed: 800,
+        navigation: {
+            nextEl: nextElArrow,
+            prevEl: prevElArrow,
+        },
+    });
+
+})
