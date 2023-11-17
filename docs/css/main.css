@@ -3201,20 +3201,6 @@ ul.sidebar__list {
   position: relative;
 }
 
-ul.sidebar__list::before {
-  position: absolute;
-  left: 35px;
-  right: 35px;
-  content: "";
-  bottom: -27px;
-  height: 1px;
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
-ul.sidebar__list:nth-of-type(2)::before {
-  background-color: rgba(58, 76, 92, 0.16);
-}
-
 .sidebar-item {
   border-radius: 12px;
   margin-bottom: 4px;
@@ -3326,15 +3312,16 @@ ul.sidebar__list:nth-of-type(2)::before {
 
 .sidebar-item__inner .inner__title {
   display: flex;
-  align-items: center;
-  font-weight: 400;
-  font-size: 22px;
+  font-weight: 600;
+  font-size: 24px;
   line-height: 130%;
   color: #ffffff;
   margin-bottom: 20px;
+  padding: 0 20px;
 }
 
 .sidebar-item__inner .inner__descr {
+  padding: 0 20px;
   font-weight: 300;
   font-size: 20px;
   line-height: 130%;
@@ -4427,6 +4414,7 @@ section.search {
   font-size: 20px !important;
   line-height: 20px !important;
   color: #004596;
+  border-bottom: none !important;
 }
 
 .breadcrumbs li {
@@ -5804,6 +5792,87 @@ section.search {
   margin-right: 0;
 }
 
+span[data-toltip] {
+  cursor: help;
+  border-bottom: 1.5px solid #343a45;
+}
+
+a[data-toltip] {
+  border-bottom: 1.5px solid #004596;
+}
+
+.letters-list {
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.letters-list .letter-item {
+  margin-bottom: 20px;
+  cursor: pointer;
+  color: #000;
+  font-family: Inter;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 170%;
+  /* 47.6px */
+}
+
+.letters-list .letter-item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.letters-list .letter-item.selected {
+  color: #004596;
+}
+
+.dictionary-content {
+  padding-top: 20px;
+}
+
+.dictionary__letter-group {
+  margin-bottom: 40px;
+}
+
+.dictionary__letter-group .dictionary__letter {
+  color: #004596;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 170%;
+  /* 47.6px */
+  margin-bottom: 40px;
+}
+
+.dictionary__letter-group .item-title {
+  margin-bottom: 20px;
+  color: #041327;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 170%;
+  /* 47.6px */
+}
+
+.dictionary__letter-group .dictionary__item {
+  margin-bottom: 40px;
+}
+
+.dictionary__letter-group .item-descr {
+  color: #000;
+  font-size: 23px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 180%;
+  /* 41.4px */
+}
+
+.dictionary-content.selected .dictionary__letter-group {
+  display: none;
+}
+
+.dictionary-content.selected .dictionary__letter-group.selected {
+  display: block;
+}
+
 @media (min-width: 480px) {
   .plyr__captions {
     font-size: 15px;
@@ -6019,6 +6088,10 @@ section.search {
     margin-bottom: 15px;
   }
 
+  .sidebar-item__inner .inner__descr {
+    margin-bottom: 20px;
+  }
+
   .selection-block {
     padding: 30px;
   }
@@ -6157,6 +6230,18 @@ section.search {
   .sidebar__cat-title,
   .sidebar-item__inner .inner__title {
     font-size: 19px;
+  }
+
+  .cat-ico {
+    width: 24px;
+    height: 24px;
+    margin-top: -2px;
+  }
+
+  .sidebar-item .menu-item__link .menu-item__marker {
+    width: 28px;
+    height: 28px;
+    margin-right: 18px;
   }
 
   .sidebar__title {

@@ -1,0 +1,125 @@
+@@include('./html/head.html')
+<main>
+    @@include('./html/sidebar.html')
+    <div class="content-zone">
+        @@include('./html/header.html')
+        <div class="article-container">
+            <ul class="breadcrumbs">
+                <li class="breadcrumbs__li">
+                    <a href="">Экосистема БКК</a>
+                </li>
+                <li class="breadcrumbs__li">
+                    <a href="">Словарь нефтегазовых терминов</a>
+                </li>
+            </ul>
+            <h1 class="main-title">Словарь нефтегазовых терминов</h1>
+            <div class="letters-list">
+                <div class="letter-item" data-letter="A">A</div>
+                <div class="letter-item" data-letter="Б">Б</div>
+                <div class="letter-item" data-letter="В">В</div>
+                <div class="letter-item" data-letter="Г">Г</div>
+                <div class="letter-item" data-letter="Д">Д</div>
+                <div class="letter-item" data-letter="З">З</div>
+                <div class="letter-item" data-letter="И">И</div>
+            </div>
+
+            <div class="dictionary-content" id="dictionary-content-zone">
+                <div class="dictionary__letter-group" data-letter-group="A">
+                    <div class="dictionary__letter">A</div>
+                    <div class="dictionary__item">
+                        <div class="item-title">Автомобильные бензины</div>
+                        <div class="item-descr">
+                            Легкие фракции (составные части) нефти, выкипающие при температуре 40–205° С. Служат
+                            топливом для автомобильных двигателей. Выделяют этилированные и неэтилированные
+                            автомобильные бензины. Выпускают пять сортов бензинов марок А-66, А-72, А-76, АИ-93, АИ-98.
+                        </div>
+                    </div>
+
+                    <div class="dictionary__item">
+                        <div class="item-title">Ароматические углероды</div>
+                        <div class="item-descr">
+                            Циклические органические соединения, имеющие в своем составе ароматическую систему связей.
+                            Могут иметь насыщенные или ненасыщенные боковые цепи. К наиболее важным ароматическим
+                            углеводородам относят бензол С6Н6 и его гомологи : толуол С6Н5СН3, ксилол С6Н4(СН3)2 и др.;
+                            нафталин C10H8, антрацен С14Н10 и их производные. Отличительные химические свойства —
+                            повышенная устойчивость ароматического ядра и склонность к реакциям замещения. Основные
+                            источники получения — каменноугольная смола, нефть, нефтепродукты, а также синтетические
+                            методы.
+                        </div>
+                    </div>
+                </div>
+                <div class="dictionary__letter-group" data-letter-group="Б">
+                    <div class="dictionary__letter">Б</div>
+                    <div class="dictionary__item">
+                        <div class="item-title">Баржа</div>
+                        <div class="item-descr">
+                            Несамодвижущееся судно, используемое в качестве базы для бурового оборудования при подводной
+                            прокладке трубопроводов или транспортировке нефти и нефтепродуктов на короткие расстояния.
+                        </div>
+                    </div>
+
+                    <div class="dictionary__item">
+                        <div class="item-title">Баррель</div>
+                        <div class="item-descr">
+                            Единица объема добычи нефти и нефтепродуктов. <br>
+                            1 баррель = 42 американских галлона = 159 литров <br>
+                            7,3 барреля = 1 тонна нефти <br>
+                            6,29 барреля = 1 м3 нефти
+                        </div>
+                    </div>
+                </div>
+                <div class="dictionary__letter-group" data-letter-group="В">
+                    <div class="dictionary__letter">В</div>
+                </div>
+                <div class="dictionary__letter-group" data-letter-group="Г">
+                    <div class="dictionary__letter">Г</div>
+                </div>
+                <div class="dictionary__letter-group" data-letter-group="Д">
+                    <div class="dictionary__letter">Д</div>
+                </div>
+                <div class="dictionary__letter-group" data-letter-group="З">
+                    <div class="dictionary__letter">З</div>
+                </div>
+                <div class="dictionary__letter-group" data-letter-group="И">
+                    <div class="dictionary__letter">И</div>
+                </div>
+            </div>
+        </div>
+        <div class="article__pagination">
+            <a href="javaccript:void(0)" class="article__pagination-item _prev">
+                <div class=" pagination-item__arrow">Предыдущий материал</div>
+                <div class="pagination-item__title">Планирование закупок</div>
+                <div class="pagination-item__descr">Общие регламенты БКК</div>
+            </a>
+            <a href="javaccript:void(0)" class="article__pagination-item _next">
+                <div class=" pagination-item__arrow">Следующий материал</div>
+                <div class="pagination-item__title">Вступление в общественные организации</div>
+                <div class="pagination-item__descr">Общие регламенты БКК</div>
+            </a>
+        </div>
+    </div>
+</main>
+<script>
+    const dictionaryContentZone = document.querySelector('#dictionary-content-zone');
+
+    document.addEventListener('click', (e) => {
+        const target = e.target;
+        const letterBtn = target.closest('[data-letter]');
+        if (letterBtn) {
+            const activeBtn = document.querySelector('[data-letter].selected');
+            activeBtn && activeBtn.classList.remove('selected');
+
+            const activeGroup = document.querySelector('[data-letter-group].selected')
+            activeGroup && activeGroup.classList.remove('selected');
+
+            letterBtn.classList.add('selected');
+            const letter = letterBtn.getAttribute('data-letter');
+            const selectedLetterGroup = dictionaryContentZone.querySelector(`[data-letter-group="${letter}"]`)
+            if (selectedLetterGroup) {
+                dictionaryContentZone.classList.add('selected');
+                selectedLetterGroup.classList.add('selected');
+            }
+        }
+    })
+</script>
+@@include('./html/footer.html')
