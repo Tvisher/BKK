@@ -3074,6 +3074,9 @@ a[data-toltip] {
     display: none;
     &.selected {
       display: block;
+      .dictionary__letter {
+        display: none;
+      }
     }
   }
 }
