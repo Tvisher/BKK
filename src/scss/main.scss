@@ -3080,3 +3080,19 @@ a[data-toltip] {
     }
   }
 }
+
+@media (max-width: 1500px) {
+  .dictionary__letter-group .item-descr {
+    font-size: 20px;
+  }
+  .dictionary__letter-group .item-title {
+    font-size: 26px;
+    line-height: 130%;
+  }
+  .dictionary__letter-group .dictionary__letter {
+    margin-bottom: 30px;
+  }
+  .dictionary-content {
+    padding-top: 0;
+  }
+}
