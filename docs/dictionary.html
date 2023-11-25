@@ -285,6 +285,7 @@
             </ul>
             <h1 class="main-title">Словарь нефтегазовых терминов</h1>
             <div class="letters-list">
+                <div class="letter-item letter-item__reset" data-letter="all">ВСЕ</div>
                 <div class="letter-item" data-letter="A">A</div>
                 <div class="letter-item" data-letter="Б">Б</div>
                 <div class="letter-item" data-letter="В">В</div>
@@ -384,6 +385,11 @@
             activeGroup && activeGroup.classList.remove('selected');
 
             letterBtn.classList.add('selected');
+
+            if (letterBtn.classList.contains('letter-item__reset')) {
+                dictionaryContentZone.classList.remove('selected');
+                return;
+            }
             const letter = letterBtn.getAttribute('data-letter');
             const selectedLetterGroup = dictionaryContentZone.querySelector(`[data-letter-group="${letter}"]`)
             if (selectedLetterGroup) {
