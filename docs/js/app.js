@@ -111,6 +111,30 @@ document.addEventListener('click', (e) => {
     })
 })();
 
+(function () {
+    const toltipElements = document.querySelectorAll('[data-ico-toltip]');
+    if (toltipElements.length < 1) return;
+    toltipElements.forEach(item => {
+        // Собираем данные из элемента с тултипом(заголовок,иконка,текст )
+        const tooltipTextData = item.getAttribute('data-toltip-html');
+        // Формируем вёрстку для кастомного тела тутлтипа
+        const tooltipContent = `
+        <div class="custom-tippy _ico">
+            <div class="custom-tippy__body">${tooltipTextData}</div>
+        </div>`;
+        // Инитим тултип 
+        tippy(item, {
+            arrow: '<svg width="47" height="13" viewBox="0 0 47 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M23.5 13C21.9826 13 23.9151 10.4963 18.7298 6.11483C13.5445 1.73335 9.33765 -0.00725314 1.24488 2.27071e-05C-6.84789 0.00729855 53.8479 2.14065e-05 45.7551 2.14064e-05C37.6623 2.14064e-05 33.4675 1.44446 28.2702 6.11483C23.0729 10.7852 25.0174 13 23.5 13Z" fill="white"/></svg>',
+            allowHTML: true,
+            content: tooltipContent,
+            maxWidth: 450,
+            trigger: "click",
+            interactive: true,
+            appendTo: item,
+        });
+    })
+})();
+
 
 
 // Функция для форматирования времени в формат "0:30"
