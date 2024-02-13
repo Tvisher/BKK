@@ -3462,3 +3462,201 @@ a[data-toltip] {
     line-height: 140%; /* 25.2px */
   }
 }
+
+.structure-person__modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .modal-template__inner {
+    padding: 48px;
+    background-color: #fff;
+    max-width: 790px;
+    width: 100%;
+    border-radius: 28px;
+    margin: auto;
+    position: relative;
+  }
+  .structure-person-info {
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    color: rgba(0, 69, 150, 1);
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    span {
+      display: block;
+      position: relative;
+      &:not(:last-child) {
+        &::after {
+          position: absolute;
+          top: 50%;
+          right: -20px;
+          transform: translateY(-50%);
+          content: "";
+          width: 4px;
+          height: 4px;
+          background: rgba(0, 69, 150, 1);
+          opacity: 0.6;
+          border-radius: 50%;
+        }
+        margin-right: 37px;
+      }
+    }
+  }
+  .modal-person {
+    display: flex;
+    margin-bottom: 32px;
+  }
+  .modal-person__img {
+    width: 86px;
+    height: 86px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 24px;
+    flex-shrink: 0;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+  .modal-person__name {
+    color: rgba(4, 19, 39, 1);
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 29px;
+    margin-bottom: 6px;
+  }
+  .modal-person__descr {
+    color: rgba(130, 130, 130, 1);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+  }
+  .modal-person__contacts {
+    margin-bottom: 30px;
+    display: flex;
+    padding: 20px 0;
+    border-top: 1px solid rgba(206, 211, 217, 1);
+    border-bottom: 1px solid rgba(206, 211, 217, 1);
+    justify-content: space-between;
+    align-items: center;
+  }
+  .contacts__link {
+    color: rgba(4, 19, 39, 1);
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    line-height: 27px;
+  }
+  .contacts__link_ico {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(0, 69, 150, 0.06);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+    svg {
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
+    }
+  }
+  .link-chost {
+    color: #c1c4c9;
+    padding-left: 20px;
+    position: relative;
+    &::before {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background-color: #004596;
+      content: "";
+      left: 9px;
+    }
+  }
+}
+
+.modal-person__subtitle,
+.helper__title {
+  color: #041327;
+  font-size: 16px;
+  font-weight: 300;
+  margin-bottom: 16px;
+}
+.modal-person__department {
+  color: #041327;
+  font-size: 16px;
+  font-weight: 400;
+}
+.modal-person__helper {
+  background-color: #f3f5f7;
+  border-radius: 16px;
+  padding: 20px;
+  margin-top: 26px;
+}
+.helper__content {
+  display: flex;
+}
+.helper__image {
+  width: 52px;
+  height: 52px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-right: 24px;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.helper__title {
+  margin-bottom: 4px;
+}
+.helper__name {
+  font-size: 16px;
+  color: #041327;
+  font-weight: 600;
+}
+.helper__mail {
+  color: #004596;
+  font-weight: 400;
+  font-size: 16px;
+  position: relative;
+  margin-top: 12px;
+  padding-left: 30px;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='21' viewBox='0 0 20 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M3.33464 3.83594H16.668C17.5846 3.83594 18.3346 4.58594 18.3346 5.5026V15.5026C18.3346 16.4193 17.5846 17.1693 16.668 17.1693H3.33464C2.41797 17.1693 1.66797 16.4193 1.66797 15.5026V5.5026C1.66797 4.58594 2.41797 3.83594 3.33464 3.83594Z' stroke='%23004596' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3e%3cpath d='M18.3346 5.5L10.0013 11.3333L1.66797 5.5' stroke='%23004596' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e ");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+.modal-person__btn {
+  margin-top: 24px;
+  padding: 12px 20px;
+  width: fit-content;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  border-radius: 14px;
+  background-color: #004596;
+}
