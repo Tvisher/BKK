@@ -6276,7 +6276,7 @@ a[data-toltip] {
   align-items: center;
 }
 
-.structure-person__modal .modal-template__inner {
+.modal-template__inner {
   padding: 48px;
   background-color: #fff;
   max-width: 790px;
@@ -6286,27 +6286,33 @@ a[data-toltip] {
   position: relative;
 }
 
-.structure-person__modal .structure-person-info {
+.structure-person-info {
+  flex-wrap: wrap;
   margin-bottom: 24px;
   display: flex;
   align-items: center;
-  color: rgb(0, 69, 150);
   font-family: Inter;
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
 }
 
-.structure-person__modal .structure-person-info span {
-  display: block;
+.structure-person-info span,
+.structure-person-info a {
+  border-bottom: none !important;
+  color: rgb(0, 69, 150) !important;
+  margin-bottom: 5px;
+  display: block !important;
   position: relative;
 }
 
-.structure-person__modal .structure-person-info span:not(:last-child) {
+.structure-person-info span:not(:last-child),
+.structure-person-info a:not(:last-child) {
   margin-right: 37px;
 }
 
-.structure-person__modal .structure-person-info span:not(:last-child)::after {
+.structure-person-info span:not(:last-child)::after,
+.structure-person-info a:not(:last-child)::after {
   position: absolute;
   top: 50%;
   right: -20px;
@@ -6319,12 +6325,12 @@ a[data-toltip] {
   border-radius: 50%;
 }
 
-.structure-person__modal .modal-person {
+.modal-person {
   display: flex;
   margin-bottom: 32px;
 }
 
-.structure-person__modal .modal-person__img {
+.modal-person__img {
   width: 86px;
   height: 86px;
   border-radius: 50%;
@@ -6333,14 +6339,14 @@ a[data-toltip] {
   flex-shrink: 0;
 }
 
-.structure-person__modal .modal-person__img img {
+.modal-person__img img {
   width: 100%;
   height: 100%;
   object-fit: contain;
   object-position: center;
 }
 
-.structure-person__modal .modal-person__name {
+.modal-person__name {
   color: rgb(4, 19, 39);
   font-size: 21px;
   font-weight: 600;
@@ -6348,24 +6354,25 @@ a[data-toltip] {
   margin-bottom: 6px;
 }
 
-.structure-person__modal .modal-person__descr {
+.modal-person__descr {
   color: rgb(130, 130, 130);
   font-size: 16px;
   font-weight: 400;
   line-height: 26px;
 }
 
-.structure-person__modal .modal-person__contacts {
+.modal-person__contacts {
+  flex-wrap: wrap;
+  gap: 30px;
   margin-bottom: 30px;
   display: flex;
   padding: 20px 0;
   border-top: 1px solid rgb(206, 211, 217);
   border-bottom: 1px solid rgb(206, 211, 217);
-  justify-content: space-between;
   align-items: center;
 }
 
-.structure-person__modal .contacts__link {
+.contacts__link {
   color: rgb(4, 19, 39);
   font-family: Inter;
   font-size: 16px;
@@ -6375,7 +6382,7 @@ a[data-toltip] {
   line-height: 27px;
 }
 
-.structure-person__modal .contacts__link_ico {
+.contacts__link_ico {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -6386,19 +6393,19 @@ a[data-toltip] {
   margin-right: 12px;
 }
 
-.structure-person__modal .contacts__link_ico svg {
+.contacts__link_ico svg {
   width: 20px;
   height: 20px;
   object-fit: contain;
 }
 
-.structure-person__modal .link-chost {
+.link-chost {
   color: #c1c4c9;
   padding-left: 20px;
   position: relative;
 }
 
-.structure-person__modal .link-chost::before {
+.link-chost::before {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -6490,6 +6497,115 @@ a[data-toltip] {
   color: #fff;
   border-radius: 14px;
   background-color: #004596;
+}
+
+.person_page .modal-person__img {
+  width: 100px;
+  height: 100px;
+  margin-right: 40px;
+}
+
+.person_page .modal-person__name {
+  font-size: 32px;
+  line-height: 140%;
+}
+
+.person_page .modal-person__descr {
+  font-size: 22px;
+  line-height: 160%;
+}
+
+.person_page .structure-person-info {
+  margin-bottom: 32px;
+  font-size: 20px;
+}
+
+.person_page .contacts__link_ico {
+  width: 48px;
+  height: 48px;
+}
+
+.person_page .contacts__link {
+  font-size: 20px;
+}
+
+.person_page .modal-person__contacts {
+  gap: 50px;
+}
+
+.person_page .modal-person__subtitle,
+.person_page .helper__title,
+.person_page .modal-person__department {
+  font-size: 20px;
+}
+
+.person_page ol li,
+.person_page ul li {
+  line-height: 170%;
+}
+
+.person_page .helper__image {
+  width: 68px;
+  height: 68px;
+}
+
+.person_page .helper__name,
+.person_page .helper__mail {
+  font-size: 20px;
+}
+
+.person_page .helper__mail {
+  margin-top: 8px;
+}
+
+.person_page .person-helpers {
+  display: flex;
+  gap: 20px;
+}
+
+.person_page .person-helpers .modal-person__helper {
+  margin: 0;
+  flex: 0 0 calc(50% - 10px);
+}
+
+.person_page .person-info {
+  margin-top: 44px;
+  margin-bottom: 52px;
+  display: flex;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.person_page .block__title {
+  font-size: 20px;
+  font-weight: 300;
+  margin-bottom: 12px;
+}
+
+.person_page .block__content {
+  display: flex;
+  align-items: center;
+  line-height: 140%;
+  min-height: 48px;
+}
+
+.person_page .person-info__block-ico {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(0, 69, 150, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+}
+
+.person_page .modal-person__helper {
+  padding: 32px;
+}
+
+.person_page .modal-person__btn {
+  font-size: 23px;
 }
 
 @media (min-width: 480px) {
@@ -6679,8 +6795,55 @@ a[data-toltip] {
   }
 }
 
+@media (max-width: 1680px) {
+  .structure__item {
+    padding: 28px;
+    flex: 0 0 calc(50% - 10px);
+  }
+
+  .structure__items {
+    padding: 0px 25px;
+  }
+
+  .structure__second_level .structure__item {
+    flex: 0 0 calc(33.333% - 13.3333px);
+  }
+}
+
 @media (max-width: 1600px) {
   .article__tabs .article__tab-btn:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  .person_page .structure-person-info {
+    font-size: 16px;
+  }
+
+  .person_page .modal-person__name {
+    font-size: 28px;
+  }
+
+  .person_page .modal-person__descr {
+    font-size: 20px;
+  }
+
+  .person_page .modal-person__contacts {
+    gap: 30px;
+  }
+
+  .person_page .modal-person__helper {
+    padding: 25px;
+  }
+
+  .person_page .person-info {
+    margin: 35px 0;
+  }
+
+  .person_page .modal-person__btn {
+    font-size: 18px;
+  }
+
+  .person_page .modal-person__img {
     margin-right: 30px;
   }
 }
@@ -6979,6 +7142,17 @@ a[data-toltip] {
   }
 }
 
+@media (max-width: 1480px) {
+  .structure__item_title {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+
+  .structure__item {
+    padding: 25px;
+  }
+}
+
 @media (max-width: 1360px) {
   .materials__cards .materials__card {
     padding: 30px;
@@ -7056,6 +7230,14 @@ a[data-toltip] {
 
   .notification-item .notification-item__date {
     font-size: 17px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .structure__item,
+  .structure__second_level .structure__item,
+  .personal-list__item {
+    flex: 0 0 100%;
   }
 }
 
